@@ -14,9 +14,16 @@ public class SceneController {
     private Stage stage;
     private Scene scene;
     private Parent root;
-    public void Scene1(ActionEvent event) throws IOException {
-        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("scene1.fxml")));
-        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+    public void signUp(ActionEvent e) throws  IOException {
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("signup.fxml")));
+        stage = (Stage)(((Node)e.getSource()).getScene().getWindow());
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+    public void login(ActionEvent e) throws IOException {
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("login.fxml")));
+        stage = (Stage)(((Node)e.getSource()).getScene().getWindow());
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();

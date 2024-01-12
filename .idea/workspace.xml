@@ -4,16 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ea92ddbc-1357-4050-ad08-dff896fc8354" name="Changes" comment="Initial commit">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/wholesalemanagmentsystem/LoginController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/wholesalemanagmentsystem/SceneController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/wholesalemanagmentsystem/icon-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/wholesalemanagmentsystem/login.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/wholesalemanagmentsystem/style.css" afterDir="false" />
+    <list default="true" id="ea92ddbc-1357-4050-ad08-dff896fc8354" name="Changes" comment="Login fxml">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/wholesalemanagmentsystem/DatabaseController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/wholesalemanagmentsystem/SignupController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/wholesalemanagmentsystem/signup.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/wholesalemanagmentsystem/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/wholesalemanagmentsystem/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/wholesalemanagmentsystem/HelloController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/wholesalemanagmentsystem/hello-view.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/wholesalemanagmentsystem/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/wholesalemanagmentsystem/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/wholesalemanagmentsystem/SceneController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/wholesalemanagmentsystem/SceneController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/wholesalemanagmentsystem/login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/wholesalemanagmentsystem/login.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,12 +49,15 @@
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_directory_selection": "C:/Users/solom/IdeaProjects/wholesale-managment-system/src/main/java/com/example/wholesalemanagmentsystem",
-    "last_opened_file_path": "C:/Users/solom/SceneBuilder/SceneBuilder.exe",
+    "last_opened_file_path": "C:/Users/solom/IdeaProjects/wholesale-managment-system/lib/mysql-connector-j-8.2.0.jar",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
     "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true"
   }
@@ -86,7 +87,8 @@
       <workItem from="1704473412000" duration="8000" />
       <workItem from="1704774603656" duration="9212000" />
       <workItem from="1704946669104" duration="738000" />
-      <workItem from="1704947430004" duration="8601000" />
+      <workItem from="1704947430004" duration="13364000" />
+      <workItem from="1705042547892" duration="1406000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -104,7 +106,15 @@
       <option name="project" value="LOCAL" />
       <updated>1704775378725</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Login fxml">
+      <option name="closed" value="true" />
+      <created>1704962091614</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1704962091614</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -112,6 +122,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial commit" />
+    <MESSAGE value="Login fxml" />
+    <option name="LAST_COMMIT_MESSAGE" value="Login fxml" />
   </component>
 </project>
