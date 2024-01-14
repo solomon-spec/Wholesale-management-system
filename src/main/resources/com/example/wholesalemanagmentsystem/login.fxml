@@ -33,7 +33,7 @@
             <Font name="Comic Sans MS" size="14.0" />
          </font>
       </Text>
-      <Hyperlink layoutX="480.0" layoutY="381.0" onAction="#signUp" prefHeight="24.0" prefWidth="55.0" text="Sign up" />
+      <Hyperlink layoutX="480.0" layoutY="381.0" onAction="#toSignup" prefHeight="24.0" prefWidth="55.0" text="Sign up" />
       <Text layoutX="336.0" layoutY="397.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Don't have an account yet?" wrappingWidth="144.13671875" />
       <TextField fx:id="loginUsername" layoutX="333.0" layoutY="163.0" prefHeight="28.0" prefWidth="189.0" />
       <PasswordField fx:id="loginPassword" layoutX="336.0" layoutY="250.0" prefHeight="28.0" prefWidth="189.0" />
