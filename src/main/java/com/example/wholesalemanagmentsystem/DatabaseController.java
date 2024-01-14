@@ -3,11 +3,16 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 public class DatabaseController {
+
+    // this method is used to connect to the database and return the connection object
     public static Connection connect() throws SQLException {
-        String url = "jdbc:mysql://localhost:3306/your_database";
-        String username = "your_username";
-        String password = "your_password";
+
+        String url = "jdbc:mysql://localhost:3500/javawms";
+        String username = "java";
+        String password = "root";
 
         return DriverManager.getConnection(url, username, password);
     }
 }
+
+
