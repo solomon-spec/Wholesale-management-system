@@ -4,13 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ea92ddbc-1357-4050-ad08-dff896fc8354" name="Changes" comment="Login fxml">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/wholesalemanagmentsystem/DatabaseController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/wholesalemanagmentsystem/SignupController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/wholesalemanagmentsystem/signup.fxml" afterDir="false" />
+    <list default="true" id="ea92ddbc-1357-4050-ad08-dff896fc8354" name="Changes" comment="Database Setup">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/wholesalemanagmentsystem/DatabaseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/wholesalemanagmentsystem/DatabaseController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/wholesalemanagmentsystem/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/wholesalemanagmentsystem/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/wholesalemanagmentsystem/SceneController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/wholesalemanagmentsystem/SceneController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/wholesalemanagmentsystem/login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/wholesalemanagmentsystem/login.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -40,7 +37,9 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.DatabaseController.executor": "Run",
     "Application.HelloApplication.executor": "Run",
+    "Application.LoginController.executor": "Run",
     "Application.Main.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -69,6 +68,54 @@
       <recent name="C:\Users\solom\IdeaProjects\wholesale-managment-system\src\images" />
     </key>
   </component>
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="DatabaseController" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.wholesalemanagmentsystem.DatabaseController" />
+      <module name="wholesale-managment-system" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.wholesalemanagmentsystem.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LoginController" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.wholesalemanagmentsystem.LoginController" />
+      <module name="wholesale-managment-system" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.wholesalemanagmentsystem.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.wholesalemanagmentsystem.Main" />
+      <module name="wholesale-managment-system" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.wholesalemanagmentsystem.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.LoginController" />
+        <item itemvalue="Application.DatabaseController" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -88,7 +135,9 @@
       <workItem from="1704774603656" duration="9212000" />
       <workItem from="1704946669104" duration="738000" />
       <workItem from="1704947430004" duration="13364000" />
-      <workItem from="1705042547892" duration="1406000" />
+      <workItem from="1705042547892" duration="2425000" />
+      <workItem from="1705219664547" duration="454000" />
+      <workItem from="1705221071253" duration="4608000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -114,7 +163,15 @@
       <option name="project" value="LOCAL" />
       <updated>1704962091614</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Database Setup">
+      <option name="closed" value="true" />
+      <created>1705046716790</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1705046716790</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -123,6 +180,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial commit" />
     <MESSAGE value="Login fxml" />
-    <option name="LAST_COMMIT_MESSAGE" value="Login fxml" />
+    <MESSAGE value="Database Setup" />
+    <option name="LAST_COMMIT_MESSAGE" value="Database Setup" />
   </component>
 </project>
