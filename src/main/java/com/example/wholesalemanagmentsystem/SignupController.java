@@ -43,7 +43,7 @@ public class SignupController extends SceneController{
         else {
             AuthenticationService.RegisterUser(userName.getText(),password.getText(),email.getText(), firstName.getText(),lastName.getText(),"male");
             System.out.println("User added successfully");
-            super.signUpScene(e);
+            super.loginScene(e);
         }
     }
 }

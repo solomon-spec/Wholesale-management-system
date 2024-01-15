@@ -4,15 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ea92ddbc-1357-4050-ad08-dff896fc8354" name="Changes" comment="Login functionality">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/wholesalemanagmentsystem/AuthenticationService.java" afterDir="false" />
+    <list default="true" id="ea92ddbc-1357-4050-ad08-dff896fc8354" name="Changes" comment="Add Sign UP">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/wholesalemanagmentsystem/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/wholesalemanagmentsystem/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/wholesalemanagmentsystem/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/wholesalemanagmentsystem/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/wholesalemanagmentsystem/SceneController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/wholesalemanagmentsystem/SceneController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/wholesalemanagmentsystem/SignupController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/wholesalemanagmentsystem/SignupController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/wholesalemanagmentsystem/login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/wholesalemanagmentsystem/login.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/wholesalemanagmentsystem/signup.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/wholesalemanagmentsystem/signup.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,31 +33,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.DatabaseController.executor": "Run",
-    "Application.HelloApplication.executor": "Run",
-    "Application.LoginController.executor": "Run",
-    "Application.Main.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_directory_selection": "C:/Users/solom/IdeaProjects/wholesale-managment-system/src/main/java/com/example/wholesalemanagmentsystem",
-    "last_opened_file_path": "C:/Users/solom/IdeaProjects/wholesale-managment-system/lib/mysql-connector-j-8.2.0.jar",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.DatabaseController.executor&quot;: &quot;Run&quot;,
+    &quot;Application.HelloApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Application.LoginController.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_directory_selection&quot;: &quot;C:/Users/solom/IdeaProjects/wholesale-managment-system/src/main/java/com/example/wholesalemanagmentsystem&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/solom/IdeaProjects/wholesale-managment-system/lib/mysql-connector-j-8.2.0.jar&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\solom\IdeaProjects\wholesale-managment-system\src\main\resources\com\example\wholesalemanagmentsystem" />
@@ -140,7 +134,9 @@
       <workItem from="1704947430004" duration="13364000" />
       <workItem from="1705042547892" duration="2425000" />
       <workItem from="1705219664547" duration="454000" />
-      <workItem from="1705221071253" duration="11968000" />
+      <workItem from="1705221071253" duration="12346000" />
+      <workItem from="1705247210221" duration="3157000" />
+      <workItem from="1705300006160" duration="886000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -190,7 +186,15 @@
       <option name="project" value="LOCAL" />
       <updated>1705232094648</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Add Sign UP">
+      <option name="closed" value="true" />
+      <created>1705242984015</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1705242984015</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -201,6 +205,7 @@
     <MESSAGE value="Login fxml" />
     <MESSAGE value="Database Setup" />
     <MESSAGE value="Login functionality" />
-    <option name="LAST_COMMIT_MESSAGE" value="Login functionality" />
+    <MESSAGE value="Add Sign UP" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Sign UP" />
   </component>
 </project>
