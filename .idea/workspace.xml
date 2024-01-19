@@ -4,9 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ea92ddbc-1357-4050-ad08-dff896fc8354" name="Changes" comment="Add Sign UP">
+    <list default="true" id="ea92ddbc-1357-4050-ad08-dff896fc8354" name="Changes" comment="Added entities">
+      <change afterPath="$PROJECT_DIR$/lib/databaseSchema.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/wholesalemanagmentsystem/controllers/AdminController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/wholesalemanagmentsystem/controllers/UserManagementController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/wholesalemanagmentsystem/entities/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/wholesalemanagmentsystem/entities/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/wholesalemanagmentsystem/UserManagment.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/wholesalemanagmentsystem/admin.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/wholesalemanagmentsystem/SignupController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/wholesalemanagmentsystem/SignupController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/wholesalemanagmentsystem/AuthenticationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/wholesalemanagmentsystem/AuthenticationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/wholesalemanagmentsystem/DatabaseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/wholesalemanagmentsystem/controllers/DatabaseController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/wholesalemanagmentsystem/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/wholesalemanagmentsystem/controllers/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/wholesalemanagmentsystem/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/wholesalemanagmentsystem/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/wholesalemanagmentsystem/SceneController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/wholesalemanagmentsystem/controllers/SceneController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/wholesalemanagmentsystem/SignupController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/wholesalemanagmentsystem/controllers/SignupController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/wholesalemanagmentsystem/login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/wholesalemanagmentsystem/login.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/wholesalemanagmentsystem/signup.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/wholesalemanagmentsystem/signup.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +37,20 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;solomon-spec&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="c82d086d-fd67-43de-b11f-100a7c09fb60" />
+        <option name="url" value="https://github.com/SoftwareAssigment/Wholesale-management-system" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
@@ -45,7 +73,7 @@
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;last_directory_selection&quot;: &quot;C:/Users/solom/IdeaProjects/wholesale-managment-system/src/main/java/com/example/wholesalemanagmentsystem&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/solom/IdeaProjects/wholesale-managment-system/lib/mysql-connector-j-8.2.0.jar&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/solom/IdeaProjects/Advent-of-code&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -67,11 +95,11 @@
   </component>
   <component name="RunManager" selected="Application.Main">
     <configuration name="DatabaseController" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.example.wholesalemanagmentsystem.DatabaseController" />
+      <option name="MAIN_CLASS_NAME" value="com.example.wholesalemanagmentsystem.controllers.DatabaseController" />
       <module name="wholesale-managment-system" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.wholesalemanagmentsystem.*" />
+          <option name="PATTERN" value="com.example.wholesalemanagmentsystem.controllers.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -80,11 +108,11 @@
       </method>
     </configuration>
     <configuration name="LoginController" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.example.wholesalemanagmentsystem.LoginController" />
+      <option name="MAIN_CLASS_NAME" value="com.example.wholesalemanagmentsystem.controllers.LoginController" />
       <module name="wholesale-managment-system" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.wholesalemanagmentsystem.*" />
+          <option name="PATTERN" value="com.example.wholesalemanagmentsystem.controllers.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -97,7 +125,7 @@
       <module name="wholesale-managment-system" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.wholesalemanagmentsystem.*" />
+          <option name="PATTERN" value="com.example.wholesalemanagmentsystem.controllers.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -136,7 +164,17 @@
       <workItem from="1705219664547" duration="454000" />
       <workItem from="1705221071253" duration="12346000" />
       <workItem from="1705247210221" duration="3157000" />
-      <workItem from="1705300006160" duration="886000" />
+      <workItem from="1705300006160" duration="2502000" />
+      <workItem from="1705373249673" duration="1004000" />
+      <workItem from="1705405880415" duration="492000" />
+      <workItem from="1705406512169" duration="647000" />
+      <workItem from="1705411758375" duration="115000" />
+      <workItem from="1705411909223" duration="117000" />
+      <workItem from="1705412050090" duration="1991000" />
+      <workItem from="1705430867719" duration="29000" />
+      <workItem from="1705430926087" duration="2113000" />
+      <workItem from="1705475852105" duration="294000" />
+      <workItem from="1705662859059" duration="3675000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -194,7 +232,15 @@
       <option name="project" value="LOCAL" />
       <updated>1705242984015</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Bug fix">
+      <option name="closed" value="true" />
+      <created>1705301074546</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1705301074546</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -206,6 +252,8 @@
     <MESSAGE value="Database Setup" />
     <MESSAGE value="Login functionality" />
     <MESSAGE value="Add Sign UP" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Sign UP" />
+    <MESSAGE value="Bug fix" />
+    <MESSAGE value="Added entities" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added entities" />
   </component>
 </project>

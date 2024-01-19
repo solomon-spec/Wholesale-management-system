@@ -1,5 +1,7 @@
 package com.example.wholesalemanagmentsystem;
 
+import com.example.wholesalemanagmentsystem.controllers.DatabaseController;
+
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;

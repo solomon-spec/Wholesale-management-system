@@ -1,5 +1,7 @@
-package com.example.wholesalemanagmentsystem;
+package com.example.wholesalemanagmentsystem.controllers;
 
+import com.example.wholesalemanagmentsystem.AuthenticationService;
+import com.example.wholesalemanagmentsystem.controllers.SceneController;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.CheckBox;
@@ -9,7 +11,7 @@ import javafx.scene.control.TextField;
 
 import java.io.IOException;
 
-public class SignupController extends SceneController{
+public class SignupController extends SceneController {
     @FXML
     public TextField firstName, lastName, userName,  email;
     @FXML

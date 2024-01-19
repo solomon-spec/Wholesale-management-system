@@ -1,5 +1,7 @@
-package com.example.wholesalemanagmentsystem;
+package com.example.wholesalemanagmentsystem.controllers;
 
+import com.example.wholesalemanagmentsystem.AuthenticationService;
+import com.example.wholesalemanagmentsystem.controllers.SceneController;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 

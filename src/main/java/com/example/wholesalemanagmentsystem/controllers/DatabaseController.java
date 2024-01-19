@@ -1,4 +1,4 @@
-package com.example.wholesalemanagmentsystem;
+package com.example.wholesalemanagmentsystem.controllers;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -12,6 +12,9 @@ public class DatabaseController {
         String password = "root";
 
         return DriverManager.getConnection(url, username, password);
+    }
+    public static void main() throws SQLException {
+         connect();
     }
 }
 
