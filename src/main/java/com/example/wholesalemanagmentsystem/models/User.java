@@ -1,4 +1,4 @@
-package com.example.wholesalemanagmentsystem.entities;
+package com.example.wholesalemanagmentsystem.models;
 
 public class User {
     private int userId;

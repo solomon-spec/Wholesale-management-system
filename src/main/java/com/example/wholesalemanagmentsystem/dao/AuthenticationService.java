@@ -1,4 +1,4 @@
-package com.example.wholesalemanagmentsystem;
+package com.example.wholesalemanagmentsystem.dao;
 
 import com.example.wholesalemanagmentsystem.controllers.DatabaseController;
 

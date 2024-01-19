@@ -1,6 +1,4 @@
-package com.example.wholesalemanagmentsystem.entities;
-
-import java.nio.file.attribute.UserPrincipal;
+package com.example.wholesalemanagmentsystem.models;
 
 public class Product {
     private int productId;

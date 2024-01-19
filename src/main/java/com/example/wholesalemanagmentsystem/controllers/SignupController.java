@@ -1,7 +1,6 @@
 package com.example.wholesalemanagmentsystem.controllers;
 
-import com.example.wholesalemanagmentsystem.AuthenticationService;
-import com.example.wholesalemanagmentsystem.controllers.SceneController;
+import com.example.wholesalemanagmentsystem.dao.AuthenticationService;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.CheckBox;
