@@ -1,5 +1,7 @@
 package com.example.wholesalemanagmentsystem.models;
 
+import java.util.ArrayList;
+
 public class User {
     private int userId;
     private String userName;
@@ -9,9 +11,10 @@ public class User {
     private String lastName;
     private String gender;
     private boolean isAdmin;
+    private ArrayList<Product> cart;
 
 
-    public User(int userId, String userName, String password, String email, String firstName, String lastName, String gender, boolean isAdmin) {
+    public User(int userId, String userName, String password, String email, String firstName, String lastName, String gender, boolean isAdmin, ArrayList<Product> cart) {
         this.userId = userId;
         this.userName = userName;
         this.password = password;
@@ -20,6 +23,7 @@ public class User {
         this.lastName = lastName;
         this.gender = gender;
         this.isAdmin = isAdmin;
+        this.cart = cart;
     }
 
     public int getUserId() {
@@ -49,6 +53,11 @@ public class User {
     public boolean getIsAdmin() {
         return isAdmin;
     }
+
+    public ArrayList<Product> getCart() {
+        return cart;
+    }
+
     public void setUserId(int userId) {
         this.userId = userId;
     }
@@ -72,5 +81,13 @@ public class User {
     }
     public void setIsAdmin(boolean isAdmin) {
         this.isAdmin = isAdmin;
+    }
+
+    public void setAdmin(boolean admin) {
+        isAdmin = admin;
+    }
+
+    public void setCart(ArrayList<Product> cart) {
+        this.cart = cart;
     }
 }

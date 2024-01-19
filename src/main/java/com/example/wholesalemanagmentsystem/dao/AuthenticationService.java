@@ -48,6 +48,7 @@ public class AuthenticationService {
         catch (SQLException e) {
             throw new RuntimeException(e);
         }
+
     }
     // check if username is unique
     public static boolean checkUsername(String username) {
@@ -85,6 +86,16 @@ public class AuthenticationService {
             throw new RuntimeException(e);
         }
         return false;
+    }
+
+    public static boolean checkAdmin(String username) throws SQLException {
+        String query = "SELECT * FROM users WHERE username = ? AND isAdmin = 1";
+        PreparedStatement statement = DatabaseController.connect().prepareStatement(query);
+
+        statement.setString(1, username);
+
+        ResultSet resultSet = statement.executeQuery();
+        return resultSet.next();
     }
 
 
