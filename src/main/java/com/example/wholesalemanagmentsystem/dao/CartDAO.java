@@ -10,23 +10,6 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 public class CartDAO {
-//    CREATE TABLE Cart (
-//            CartID INT AUTO_INCREMENT PRIMARY KEY,
-//            UserID INT,
-//            ProductID INT,
-//            Quantity INT NOT NULL,
-//            CONSTRAINT FK_User_Cart FOREIGN KEY (UserID) REFERENCES User(UserID),
-//    CONSTRAINT FK_Product_Cart FOREIGN KEY (ProductID) REFERENCES Product(ProductID)
-//            );
-//CREATE TABLE OrderItem (
-//            OrderItemID INT AUTO_INCREMENT PRIMARY KEY,
-//            OrderID INT,
-//            ProductID INT,
-//            Quantity INT NOT NULL,
-//            Price DECIMAL(10, 2) NOT NULL,
-//    CONSTRAINT FK_Order_OrderItem FOREIGN KEY (OrderID) REFERENCES Order(OrderID),
-//    CONSTRAINT FK_Product_OrderItem FOREIGN KEY (ProductID) REFERENCES Product(ProductID)
-//            );
     private Connection connection;
     // get order history of a user
     public ArrayList<Order> getOrderHistory(int userId) throws SQLException {

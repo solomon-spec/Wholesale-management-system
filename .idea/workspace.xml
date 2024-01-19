@@ -4,13 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ea92ddbc-1357-4050-ad08-dff896fc8354" name="Changes" comment="Order DOA">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/wholesalemanagmentsystem/dao/CartDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/wholesalemanagmentsystem/dao/UserDOA.java" afterDir="false" />
+    <list default="true" id="ea92ddbc-1357-4050-ad08-dff896fc8354" name="Changes" comment="Modules">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/wholesalemanagmentsystem/dao/AuthenticationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/wholesalemanagmentsystem/dao/AuthenticationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/wholesalemanagmentsystem/controllers/UserManagementController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/wholesalemanagmentsystem/controllers/UserManagementController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/wholesalemanagmentsystem/dao/CartDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/wholesalemanagmentsystem/dao/CartDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/wholesalemanagmentsystem/dao/OrderDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/wholesalemanagmentsystem/dao/OrderDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/wholesalemanagmentsystem/models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/wholesalemanagmentsystem/models/User.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -197,7 +195,7 @@
       <workItem from="1705430867719" duration="29000" />
       <workItem from="1705430926087" duration="2113000" />
       <workItem from="1705475852105" duration="294000" />
-      <workItem from="1705662859059" duration="16382000" />
+      <workItem from="1705662859059" duration="18690000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -295,7 +293,23 @@
       <option name="project" value="LOCAL" />
       <updated>1705682709206</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Cart and order DOA">
+      <option name="closed" value="true" />
+      <created>1705687446727</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1705687446727</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Modules">
+      <option name="closed" value="true" />
+      <created>1705687834906</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1705687834906</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -312,7 +326,9 @@
     <MESSAGE value="Product DAO" />
     <MESSAGE value="Order Model" />
     <MESSAGE value="Order DOA" />
-    <option name="LAST_COMMIT_MESSAGE" value="Order DOA" />
+    <MESSAGE value="Cart and order DOA" />
+    <MESSAGE value="Modules" />
+    <option name="LAST_COMMIT_MESSAGE" value="Modules" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

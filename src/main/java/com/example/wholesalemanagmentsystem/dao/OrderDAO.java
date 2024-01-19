@@ -9,15 +9,6 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 public class OrderDAO {
-    //    CREATE TABLE `Order` (
-//    OrderID INT AUTO_INCREMENT PRIMARY KEY,
-//    User_ID INT,
-//    OrderDate TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-//    TotalAmount DECIMAL(10, 2) NOT NULL,
-//    PaymentStatus ENUM('Pending', 'Completed') DEFAULT 'Pending',
-//    ShippingAddress VARCHAR(255),
-//    CONSTRAINT FK_User_Order FOREIGN KEY (user_ID) REFERENCES User(user_ID)
-//            );
     private Connection connection;
 
     public boolean createOrder(Order order) throws SQLException {
