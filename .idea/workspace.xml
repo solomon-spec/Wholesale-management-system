@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ea92ddbc-1357-4050-ad08-dff896fc8354" name="Changes" comment="Product DAO">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/wholesalemanagmentsystem/models/Order.java" afterDir="false" />
+    <list default="true" id="ea92ddbc-1357-4050-ad08-dff896fc8354" name="Changes" comment="Order Model">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/wholesalemanagmentsystem/dao/OrderDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,6 +56,7 @@
     "Application.HelloApplication.executor": "Run",
     "Application.LoginController.executor": "Run",
     "Application.Main.executor": "Run",
+    "Application.OrderDAO.executor": "Run",
     "Application.ProductDAO.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -82,7 +84,7 @@
       <recent name="C:\Users\solom\IdeaProjects\wholesale-managment-system\src\images" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.ProductDAO">
+  <component name="RunManager" selected="Application.OrderDAO">
     <configuration name="DatabaseController" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.wholesalemanagmentsystem.controllers.DatabaseController" />
       <module name="wholesale-managment-system" />
@@ -122,6 +124,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="OrderDAO" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.wholesalemanagmentsystem.dao.OrderDAO" />
+      <module name="wholesale-managment-system" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.wholesalemanagmentsystem.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ProductDAO" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.wholesalemanagmentsystem.dao.ProductDAO" />
       <module name="wholesale-managment-system" />
@@ -137,6 +152,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.OrderDAO" />
         <item itemvalue="Application.ProductDAO" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.LoginController" />
@@ -177,7 +193,7 @@
       <workItem from="1705430867719" duration="29000" />
       <workItem from="1705430926087" duration="2113000" />
       <workItem from="1705475852105" duration="294000" />
-      <workItem from="1705662859059" duration="9780000" />
+      <workItem from="1705662859059" duration="10978000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -259,7 +275,15 @@
       <option name="project" value="LOCAL" />
       <updated>1705672604539</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Order Model">
+      <option name="closed" value="true" />
+      <created>1705672757781</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1705672757781</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -274,7 +298,8 @@
     <MESSAGE value="Bug fix" />
     <MESSAGE value="Added entities" />
     <MESSAGE value="Product DAO" />
-    <option name="LAST_COMMIT_MESSAGE" value="Product DAO" />
+    <MESSAGE value="Order Model" />
+    <option name="LAST_COMMIT_MESSAGE" value="Order Model" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
