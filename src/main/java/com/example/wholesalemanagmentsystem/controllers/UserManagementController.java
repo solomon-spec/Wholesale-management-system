@@ -4,11 +4,15 @@ import com.example.wholesalemanagmentsystem.dao.UserDOA;
 import com.example.wholesalemanagmentsystem.models.User;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
+import javafx.scene.control.TableCell;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.util.Callback;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -34,6 +38,8 @@ public class UserManagementController extends SceneController implements Initial
 
     @FXML
     private TableView<User> userTable;
+    @FXML
+    private TableColumn<User, Void> details;
     ObservableList<User> users = FXCollections.observableArrayList();
     UserDOA userDOA = new UserDOA();
     // populate users
@@ -46,6 +52,8 @@ public class UserManagementController extends SceneController implements Initial
         firstName.setCellValueFactory(new PropertyValueFactory<User, String>("firstName"));
         lastName.setCellValueFactory(new PropertyValueFactory<User, String>("lastName"));
         gender.setCellValueFactory(new PropertyValueFactory<User, String>("gender"));
+
+
         try {
             users.addAll(userDOA.getAllUser());
 
@@ -57,6 +65,33 @@ public class UserManagementController extends SceneController implements Initial
         catch (Exception e) {
             e.printStackTrace();
         }
+        details.setCellFactory(new Callback<TableColumn<User, Void>, TableCell<User, Void>>() {
+            @Override
+            public TableCell<User, Void> call(final TableColumn<User, Void> param) {
+                return new TableCell<User, Void>() {
+
+                    private final Button btn = new Button("Action");
+
+                    {
+                        btn.setOnAction((ActionEvent event) -> {
+                            User user = getTableView().getItems().get(getIndex());
+                            System.out.println("Button clicked for user: " + user);
+                        });
+                    }
+
+                    @Override
+                    public void updateItem(Void item, boolean empty) {
+                        super.updateItem(item, empty);
+                        if (empty) {
+                            setGraphic(null);
+                        } else {
+                            setGraphic(btn);
+                        }
+                    }
+                };
+            }
+        });
+
 
     }
 
