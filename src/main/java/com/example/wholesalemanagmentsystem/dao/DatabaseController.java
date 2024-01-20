@@ -1,4 +1,4 @@
-package com.example.wholesalemanagmentsystem.controllers;
+package com.example.wholesalemanagmentsystem.dao;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -13,9 +13,7 @@ public class DatabaseController {
 
         return DriverManager.getConnection(url, username, password);
     }
-    public static void main() throws SQLException {
-         connect();
-    }
+
 }
 
 

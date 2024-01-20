@@ -1,5 +1,6 @@
 package com.example.wholesalemanagmentsystem.controllers;
 
-public class AdminController {
+public class AdminController extends SceneController{
+
 
 }

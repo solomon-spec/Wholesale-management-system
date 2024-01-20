@@ -1,6 +1,5 @@
 package com.example.wholesalemanagmentsystem.dao;
 
-import com.example.wholesalemanagmentsystem.controllers.DatabaseController;
 import com.example.wholesalemanagmentsystem.models.User;
 
 import java.sql.Connection;
@@ -17,7 +16,7 @@ public class UserDOA {
     // get user by id
     public User getUserById(int id)  throws SQLException {
         connection = DatabaseController.connect();
-        String query = "SELECT * FROM users WHERE user_id = ?";
+        String query = "SELECT * FROM  WHERE user_id = ?";
         PreparedStatement statement = connection.prepareStatement(query);
         statement.setString(1, String.valueOf(id));
         ResultSet resultSet = statement.executeQuery();
@@ -41,7 +40,7 @@ public class UserDOA {
     // get all users
     public ArrayList<User> getAllUser() throws SQLException {
         connection = DatabaseController.connect();
-        String query = "SELECT * FROM users";
+        String query = "SELECT * FROM user";
         PreparedStatement statement = connection.prepareStatement(query);
         ResultSet resultSet = statement.executeQuery();
         ArrayList<User> users = new ArrayList<>();
@@ -85,7 +84,7 @@ public class UserDOA {
     // delete user by id
     public boolean deleteUser(int id) throws SQLException {
         connection = DatabaseController.connect();
-        String query = "DELETE FROM users WHERE user_id = ?";
+        String query = "DELETE FROM user WHERE user_id = ?";
         PreparedStatement statement = connection.prepareStatement(query);
         statement.setString(1, String.valueOf(id));
         int rowsDeleted = statement.executeUpdate();

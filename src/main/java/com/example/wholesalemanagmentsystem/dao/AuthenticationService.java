@@ -1,7 +1,5 @@
 package com.example.wholesalemanagmentsystem.dao;
 
-import com.example.wholesalemanagmentsystem.controllers.DatabaseController;
-
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -11,7 +9,6 @@ public class AuthenticationService {
         try {
             String query = "SELECT * FROM users WHERE username = ? AND password = ?";
             PreparedStatement statement = DatabaseController.connect().prepareStatement(query);
-
 
             statement.setString(1, username);
             statement.setString(2, password);

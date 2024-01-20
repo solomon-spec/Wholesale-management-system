@@ -28,5 +28,27 @@ public class SceneController {
         stage.setScene(scene);
         stage.show();
     }
+    public void UserManagementScene(ActionEvent e) throws IOException {
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("userManagement.fxml")));
+        stage = (Stage)(((Node)e.getSource()).getScene().getWindow());
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+    public void ProductManagementScene(ActionEvent e) throws IOException {
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("userManagement.fxml")));
+        stage = (Stage)(((Node)e.getSource()).getScene().getWindow());
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+    public void orderManagementScene(ActionEvent e) throws IOException {
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("userManagement.fxml")));
+        stage = (Stage)(((Node)e.getSource()).getScene().getWindow());
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+
 
 }

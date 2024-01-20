@@ -1,6 +1,5 @@
 package com.example.wholesalemanagmentsystem.dao;
 
-import com.example.wholesalemanagmentsystem.controllers.DatabaseController;
 import com.example.wholesalemanagmentsystem.models.Product;
 
 import java.sql.Connection;

@@ -4,11 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ea92ddbc-1357-4050-ad08-dff896fc8354" name="Changes" comment="Modules">
+    <list default="true" id="ea92ddbc-1357-4050-ad08-dff896fc8354" name="Changes" comment="DOA cart and order">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/wholesalemanagmentsystem/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/wholesalemanagmentsystem/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/wholesalemanagmentsystem/controllers/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/wholesalemanagmentsystem/controllers/AdminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/wholesalemanagmentsystem/controllers/DatabaseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/wholesalemanagmentsystem/dao/DatabaseController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/wholesalemanagmentsystem/controllers/SceneController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/wholesalemanagmentsystem/controllers/SceneController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/wholesalemanagmentsystem/controllers/UserManagementController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/wholesalemanagmentsystem/controllers/UserManagementController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/wholesalemanagmentsystem/dao/AuthenticationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/wholesalemanagmentsystem/dao/AuthenticationService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/wholesalemanagmentsystem/dao/CartDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/wholesalemanagmentsystem/dao/CartDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/wholesalemanagmentsystem/dao/OrderDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/wholesalemanagmentsystem/dao/OrderDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/wholesalemanagmentsystem/dao/ProductDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/wholesalemanagmentsystem/dao/ProductDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/wholesalemanagmentsystem/dao/UserDOA.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/wholesalemanagmentsystem/dao/UserDOA.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/wholesalemanagmentsystem/UserManagment.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/wholesalemanagmentsystem/UserManagement.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/wholesalemanagmentsystem/admin.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/wholesalemanagmentsystem/admin.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,33 +62,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.DatabaseController.executor": "Run",
-    "Application.HelloApplication.executor": "Run",
-    "Application.LoginController.executor": "Run",
-    "Application.Main.executor": "Run",
-    "Application.OrderDAO.executor": "Run",
-    "Application.ProductDAO.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_directory_selection": "C:/Users/solom/IdeaProjects/wholesale-managment-system/src/main/java/com/example/wholesalemanagmentsystem",
-    "last_opened_file_path": "C:/Users/solom/IdeaProjects/Advent-of-code",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "settings.qodana",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.DatabaseController.executor&quot;: &quot;Run&quot;,
+    &quot;Application.HelloApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Application.LoginController.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.OrderDAO.executor&quot;: &quot;Run&quot;,
+    &quot;Application.ProductDAO.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_directory_selection&quot;: &quot;C:/Users/solom/IdeaProjects/wholesale-managment-system/src/main/java/com/example/wholesalemanagmentsystem&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/solom/IdeaProjects/Advent-of-code&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.qodana&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\solom\IdeaProjects\wholesale-managment-system\src\main\resources\com\example\wholesalemanagmentsystem" />
@@ -86,13 +96,13 @@
       <recent name="C:\Users\solom\IdeaProjects\wholesale-managment-system\src\images" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.OrderDAO">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="DatabaseController" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.example.wholesalemanagmentsystem.controllers.DatabaseController" />
+      <option name="MAIN_CLASS_NAME" value="com.example.wholesalemanagmentsystem.dao.DatabaseController" />
       <module name="wholesale-managment-system" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.wholesalemanagmentsystem.controllers.*" />
+          <option name="PATTERN" value="com.example.wholesalemanagmentsystem.dao.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -105,7 +115,7 @@
       <module name="wholesale-managment-system" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.wholesalemanagmentsystem.controllers.*" />
+          <option name="PATTERN" value="com.example.wholesalemanagmentsystem.dao.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -118,7 +128,7 @@
       <module name="wholesale-managment-system" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.wholesalemanagmentsystem.controllers.*" />
+          <option name="PATTERN" value="com.example.wholesalemanagmentsystem.dao.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -154,9 +164,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.OrderDAO" />
         <item itemvalue="Application.ProductDAO" />
-        <item itemvalue="Application.Main" />
         <item itemvalue="Application.LoginController" />
         <item itemvalue="Application.DatabaseController" />
       </list>
@@ -195,7 +205,8 @@
       <workItem from="1705430867719" duration="29000" />
       <workItem from="1705430926087" duration="2113000" />
       <workItem from="1705475852105" duration="294000" />
-      <workItem from="1705662859059" duration="18690000" />
+      <workItem from="1705662859059" duration="22201000" />
+      <workItem from="1705725625550" duration="9743000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -309,7 +320,15 @@
       <option name="project" value="LOCAL" />
       <updated>1705687834906</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="DOA cart and order">
+      <option name="closed" value="true" />
+      <created>1705689916583</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1705689916583</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -328,7 +347,8 @@
     <MESSAGE value="Order DOA" />
     <MESSAGE value="Cart and order DOA" />
     <MESSAGE value="Modules" />
-    <option name="LAST_COMMIT_MESSAGE" value="Modules" />
+    <MESSAGE value="DOA cart and order" />
+    <option name="LAST_COMMIT_MESSAGE" value="DOA cart and order" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

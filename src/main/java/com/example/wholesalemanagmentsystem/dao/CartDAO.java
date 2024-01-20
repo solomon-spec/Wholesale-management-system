@@ -1,6 +1,5 @@
 package com.example.wholesalemanagmentsystem.dao;
 
-import com.example.wholesalemanagmentsystem.controllers.DatabaseController;
 import com.example.wholesalemanagmentsystem.models.Order;
 import com.example.wholesalemanagmentsystem.models.Product;
 
@@ -37,7 +36,7 @@ public class CartDAO {
     // get user cart
     public ArrayList<Product> getUserCart(int userId) throws SQLException {
         connection = DatabaseController.connect();
-        String query = "SELECT * FROM Cart WHERE UserID = ?";
+        String query = "SELECT * FROM Cart WHERE User_ID = ?";
         PreparedStatement statement = connection.prepareStatement(query);
         statement.setString(1, String.valueOf(userId));
         ArrayList<Product> products = new ArrayList<>();
@@ -59,7 +58,7 @@ public class CartDAO {
     // total cost of user cart
     public float totalCost(int userId) throws SQLException{
         connection = DatabaseController.connect();
-        String query = "SELECT price FROM Cart WHERE UserID = ?";
+        String query = "SELECT price FROM Cart WHERE User_ID = ?";
         PreparedStatement statement = connection.prepareStatement(query);
         statement.setString(1, String.valueOf(userId));
         ArrayList<Product> products = new ArrayList<>();
@@ -76,7 +75,7 @@ public class CartDAO {
     // add product to cart
     public boolean addProductToCart(int userId, int productId, int quantity) throws SQLException {
         connection = DatabaseController.connect();
-        String query = "INSERT INTO Cart (UserID, ProductID, Quantity) VALUES (?, ?, ?)";
+        String query = "INSERT INTO Cart (User_ID, ProductID, Quantity) VALUES (?, ?, ?)";
         PreparedStatement statement = connection.prepareStatement(query);
         statement.setString(1, String.valueOf(userId));
         statement.setString(2, String.valueOf(productId));
@@ -89,7 +88,7 @@ public class CartDAO {
     // remove product from cart
     public boolean removeProductFromCart(int userId, int productId) throws SQLException {
         connection = DatabaseController.connect();
-        String query = "DELETE FROM Cart WHERE UserID = ? AND ProductID = ?";
+        String query = "DELETE FROM Cart WHERE User_ID = ? AND ProductID = ?";
         PreparedStatement statement = connection.prepareStatement(query);
         statement.setString(1, String.valueOf(userId));
         statement.setString(2, String.valueOf(productId));
@@ -101,7 +100,7 @@ public class CartDAO {
     // update product quantity in cart
     public boolean updateProductQuantityInCart(int userId, int productId, int quantity) throws SQLException {
         connection = DatabaseController.connect();
-        String query = "UPDATE Cart SET Quantity = ? WHERE UserID = ? AND ProductID = ?";
+        String query = "UPDATE Cart SET Quantity = ? WHERE User_ID = ? AND ProductID = ?";
         PreparedStatement statement = connection.prepareStatement(query);
         statement.setString(1, String.valueOf(quantity));
         statement.setString(2, String.valueOf(userId));
@@ -114,7 +113,7 @@ public class CartDAO {
     // clear cart
     public boolean clearCart(int userId) throws SQLException {
         connection = DatabaseController.connect();
-        String query = "DELETE FROM Cart WHERE UserID = ?";
+        String query = "DELETE FROM Cart WHERE User_ID = ?";
         PreparedStatement statement = connection.prepareStatement(query);
         statement.setString(1, String.valueOf(userId));
         int rowsInserted = statement.executeUpdate();
@@ -145,6 +144,7 @@ public class CartDAO {
             statement.setString(5, String.valueOf(product.getPrice()));
             statement.executeUpdate();
         }
+        clearCart(userId);
         return rowsInserted > 0;
 
     }
