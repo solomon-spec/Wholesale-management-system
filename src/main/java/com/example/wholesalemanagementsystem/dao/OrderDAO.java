@@ -92,19 +92,7 @@ public class OrderDAO {
         connection = DatabaseController.connect();
         String query = "SELECT * FROM `Order`";
         PreparedStatement statement = connection.prepareStatement(query);
-        ArrayList<Order> orders = new ArrayList<>();
-        var resultSet = statement.executeQuery();
-        while (resultSet.next()) {
-            orders.add(new Order(
-                    resultSet.getInt("OrderID"),
-                    resultSet.getInt("User_ID"),
-                    resultSet.getString("OrderDate"),
-                    resultSet.getFloat("TotalAmount"),
-                    resultSet.getString("PaymentStatus"),
-                    resultSet.getString("ShippingAddress")
-            ));
-        }
-        return orders;
+        return getOrders(statement);
 
     }
 
@@ -114,19 +102,7 @@ public class OrderDAO {
         String query = "SELECT * FROM `Order` WHERE User_ID = ?";
         PreparedStatement statement = connection.prepareStatement(query);
         statement.setString(1, String.valueOf(userId));
-        ArrayList<Order> orders = new ArrayList<>();
-        var resultSet = statement.executeQuery();
-        while (resultSet.next()) {
-            orders.add(new Order(
-                    resultSet.getInt("OrderID"),
-                    resultSet.getInt("User_ID"),
-                    resultSet.getString("OrderDate"),
-                    resultSet.getFloat("TotalAmount"),
-                    resultSet.getString("PaymentStatus"),
-                    resultSet.getString("ShippingAddress")
-            ));
-        }
-        return orders;
+        return getOrders(statement);
 
     }
 
@@ -136,19 +112,7 @@ public class OrderDAO {
         String query = "SELECT * FROM `Order` WHERE PaymentStatus = ?";
         PreparedStatement statement = connection.prepareStatement(query);
         statement.setString(1, paymentStatus);
-        ArrayList<Order> orders = new ArrayList<>();
-        var resultSet = statement.executeQuery();
-        while (resultSet.next()) {
-            orders.add(new Order(
-                    resultSet.getInt("OrderID"),
-                    resultSet.getInt("User_ID"),
-                    resultSet.getString("OrderDate"),
-                    resultSet.getFloat("TotalAmount"),
-                    resultSet.getString("PaymentStatus"),
-                    resultSet.getString("ShippingAddress")
-            ));
-        }
-        return orders;
+        return getOrders(statement);
 
     }
 
@@ -159,6 +123,11 @@ public class OrderDAO {
         PreparedStatement statement = connection.prepareStatement(query);
         statement.setString(1, String.valueOf(min));
         statement.setString(2, String.valueOf(max));
+        return getOrders(statement);
+
+    }
+
+    static ArrayList<Order> getOrders(PreparedStatement statement) throws SQLException {
         ArrayList<Order> orders = new ArrayList<>();
         var resultSet = statement.executeQuery();
         while (resultSet.next()) {
@@ -172,9 +141,7 @@ public class OrderDAO {
             ));
         }
         return orders;
-
     }
-
 
 
 }
