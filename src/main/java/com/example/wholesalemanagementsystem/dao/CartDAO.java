@@ -8,6 +8,8 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
+import static com.example.wholesalemanagementsystem.dao.OrderDAO.getOrders;
+
 public class CartDAO {
     private Connection connection;
     // get order history of a user
@@ -16,20 +18,7 @@ public class CartDAO {
         String query = "SELECT * FROM `Order` WHERE User_ID = ?";
         PreparedStatement statement = connection.prepareStatement(query);
         statement.setString(1, String.valueOf(userId));
-        ArrayList<Order> orders = new ArrayList<>();
-        var resultSet = statement.executeQuery();
-        while (resultSet.next()) {
-            orders.add(new Order(
-                    resultSet.getInt("OrderID"),
-                    resultSet.getInt("User_ID"),
-                    resultSet.getString("OrderDate"),
-                    resultSet.getFloat("TotalAmount"),
-                    resultSet.getString("PaymentStatus"),
-                    resultSet.getString("ShippingAddress")
-            ));
-        }
-
-        return orders;
+        return getOrders(statement);
 
     }
 
