@@ -1,4 +1,4 @@
-package com.example.wholesalemanagmentsystem.models;
+package com.example.wholesalemanagementsystem.models;
 
 import java.util.ArrayList;
 

@@ -1,7 +1,7 @@
-package com.example.wholesalemanagmentsystem.controllers;
+package com.example.wholesalemanagementsystem.controllers;
 
-import com.example.wholesalemanagmentsystem.dao.UserDOA;
-import com.example.wholesalemanagmentsystem.models.User;
+import com.example.wholesalemanagementsystem.dao.UserDOA;
+import com.example.wholesalemanagementsystem.models.User;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;

@@ -1,4 +1,4 @@
-package com.example.wholesalemanagmentsystem.dao;
+package com.example.wholesalemanagementsystem.dao;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;

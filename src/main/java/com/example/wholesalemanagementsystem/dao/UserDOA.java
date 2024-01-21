@@ -1,6 +1,6 @@
-package com.example.wholesalemanagmentsystem.dao;
+package com.example.wholesalemanagementsystem.dao;
 
-import com.example.wholesalemanagmentsystem.models.User;
+import com.example.wholesalemanagementsystem.models.User;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

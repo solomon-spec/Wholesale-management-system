@@ -1,7 +1,7 @@
-package com.example.wholesalemanagmentsystem.dao;
+package com.example.wholesalemanagementsystem.dao;
 
-import com.example.wholesalemanagmentsystem.models.Order;
-import com.example.wholesalemanagmentsystem.models.Product;
+import com.example.wholesalemanagementsystem.models.Order;
+import com.example.wholesalemanagementsystem.models.Product;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

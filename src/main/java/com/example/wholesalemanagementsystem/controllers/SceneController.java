@@ -1,4 +1,4 @@
-package com.example.wholesalemanagmentsystem.controllers;
+package com.example.wholesalemanagementsystem.controllers;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;

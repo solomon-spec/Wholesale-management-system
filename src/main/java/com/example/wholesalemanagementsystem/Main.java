@@ -1,4 +1,4 @@
-package com.example.wholesalemanagmentsystem;
+package com.example.wholesalemanagementsystem;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;

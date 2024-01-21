@@ -61,7 +61,7 @@
                         <id>default-cli</id>
                         <configuration>
                             <mainClass>
-                                com.example.wholesalemanagmentsystem/com.example.wholesalemanagmentsystem.HelloApplication
+                                com.example.wholesalemanagmentsystem/com.example.wholesalemanagementsystem.HelloApplication
                             </mainClass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>

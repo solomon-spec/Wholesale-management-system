@@ -1,4 +1,4 @@
-package com.example.wholesalemanagmentsystem.dao;
+package com.example.wholesalemanagementsystem.dao;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;

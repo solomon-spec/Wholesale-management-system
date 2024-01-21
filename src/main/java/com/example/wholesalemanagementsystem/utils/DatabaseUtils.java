@@ -1,4 +1,4 @@
-package com.example.wholesalemanagmentsystem.utils;
+package com.example.wholesalemanagementsystem.utils;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;

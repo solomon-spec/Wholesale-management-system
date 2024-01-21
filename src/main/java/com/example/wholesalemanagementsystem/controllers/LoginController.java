@@ -1,6 +1,6 @@
-package com.example.wholesalemanagmentsystem.controllers;
+package com.example.wholesalemanagementsystem.controllers;
 
-import com.example.wholesalemanagmentsystem.dao.AuthenticationService;
+import com.example.wholesalemanagementsystem.dao.AuthenticationService;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 

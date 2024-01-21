@@ -4,11 +4,11 @@ module com.example.wholesalemanagmentsystem {
     requires java.sql;
 
 
-    opens com.example.wholesalemanagmentsystem to javafx.fxml;
-    exports com.example.wholesalemanagmentsystem.controllers to javafx.fxml;
-    exports com.example.wholesalemanagmentsystem;
-    exports com.example.wholesalemanagmentsystem.dao;
-    opens com.example.wholesalemanagmentsystem.dao to javafx.fxml;
-    opens com.example.wholesalemanagmentsystem.controllers to javafx.fxml;
-    opens com.example.wholesalemanagmentsystem.models to javafx.base;
+    opens com.example.wholesalemanagementsystem to javafx.fxml;
+    exports com.example.wholesalemanagementsystem.controllers to javafx.fxml;
+    exports com.example.wholesalemanagementsystem;
+    exports com.example.wholesalemanagementsystem.dao;
+    opens com.example.wholesalemanagementsystem.dao to javafx.fxml;
+    opens com.example.wholesalemanagementsystem.controllers to javafx.fxml;
+    opens com.example.wholesalemanagementsystem.models to javafx.base;
 }
