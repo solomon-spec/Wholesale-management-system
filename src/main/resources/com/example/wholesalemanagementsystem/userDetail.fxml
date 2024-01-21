@@ -1,14 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.wholesalemanagementsystem.UserDetailController"
-            prefHeight="400.0" prefWidth="600.0">
 
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.wholesalemanagementsystem.UserDetailController">
+   <children>
+      <Label alignment="CENTER" layoutY="26.0" prefHeight="33.0" prefWidth="601.0" text="User Details" textAlignment="CENTER">
+         <font>
+            <Font name="Comic Sans MS" size="19.0" />
+         </font>
+      </Label>
+      <VBox layoutX="28.0" layoutY="84.0" prefHeight="316.0" prefWidth="137.0">
+         <children>
+            <Label alignment="TOP_LEFT" prefHeight="23.0" prefWidth="108.0" text="Name" textAlignment="CENTER">
+               <font>
+                  <Font name="Comic Sans MS" size="14.0" />
+               </font>
+            </Label>
+            <TextField />
+            <Label alignment="TOP_LEFT" prefHeight="23.0" prefWidth="108.0" text="Last Name" textAlignment="CENTER">
+               <font>
+                  <Font name="Comic Sans MS" size="14.0" />
+               </font>
+            </Label>
+            <TextField />
+            <Label alignment="TOP_LEFT" prefHeight="23.0" prefWidth="108.0" text="Email" textAlignment="CENTER">
+               <font>
+                  <Font name="Comic Sans MS" size="14.0" />
+               </font>
+            </Label>
+            <TextField />
+            <Label alignment="TOP_LEFT" prefHeight="23.0" prefWidth="108.0" text="Gender" textAlignment="CENTER">
+               <font>
+                  <Font name="Comic Sans MS" size="14.0" />
+               </font>
+            </Label>
+            <TextField />
+         </children>
+      </VBox>
+   </children>
 </AnchorPane>
