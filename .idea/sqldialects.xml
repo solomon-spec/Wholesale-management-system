@@ -2,7 +2,9 @@
 <project version="4">
   <component name="SqlDialectMappings">
     <file url="file://$PROJECT_DIR$/lib/databaseSchema.sql" dialect="GenericSQL" />
-    <file url="file://$PROJECT_DIR$/src/main/java/com/example/wholesalemanagmentsystem/controllers/LoginController.java" dialect="GenericSQL" />
-    <file url="file://$PROJECT_DIR$/src/main/java/com/example/wholesalemanagmentsystem/dao/AuthenticationService.java" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/example/wholesalemanagementsystem/controllers/LoginController.java" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/example/wholesalemanagementsystem/dao/AuthenticationService.java" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/example/wholesalemanagementsystem/dao/CartDAO.java" dialect="GenericSQL" />
+    <file url="PROJECT" dialect="MySQL" />
   </component>
 </project>
