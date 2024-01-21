@@ -5,9 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ea92ddbc-1357-4050-ad08-dff896fc8354" name="Changes" comment="Typo">
-      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/wholesalemanagementsystem/dao/CartDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/wholesalemanagementsystem/dao/CartDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/wholesalemanagementsystem/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/wholesalemanagementsystem/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/wholesalemanagementsystem/UserDetailController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/wholesalemanagementsystem/controllers/UserDetailController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/wholesalemanagementsystem/controllers/SceneController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/wholesalemanagementsystem/controllers/SceneController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/wholesalemanagementsystem/controllers/UserManagementController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/wholesalemanagementsystem/controllers/UserManagementController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/wholesalemanagementsystem/dao/OrderDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/wholesalemanagementsystem/dao/OrderDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/wholesalemanagementsystem/userDetail.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/wholesalemanagementsystem/userDetail.fxml" afterDir="false" />
@@ -69,15 +72,15 @@
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;last_directory_selection&quot;: &quot;C:/Users/solom/IdeaProjects/wholesale-managment-system/src/main/java/com/example/wholesalemanagmentsystem&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/solom/SceneBuilder/SceneBuilder.exe&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/solom/IdeaProjects/wholesale-managment-system/lib/mysql-connector-j-8.2.0.jar&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;settings.qodana&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
@@ -97,7 +100,7 @@
   <component name="RunManager" selected="Application.Main">
     <configuration name="DatabaseController" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.wholesalemanagementsystem.dao.DatabaseController" />
-      <module name="wholesale-managment-system" />
+      <module name="wholesale-management-system" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.example.wholesalemanagementsystem.dao.*" />
@@ -110,7 +113,7 @@
     </configuration>
     <configuration name="LoginController" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.wholesalemanagementsystem.controllers.LoginController" />
-      <module name="wholesale-managment-system" />
+      <module name="wholesale-management-system" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.example.wholesalemanagementsystem.dao.*" />
@@ -123,7 +126,7 @@
     </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.wholesalemanagementsystem.Main" />
-      <module name="wholesale-managment-system" />
+      <module name="wholesale-management-system" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.example.wholesalemanagementsystem.dao.*" />
@@ -136,7 +139,7 @@
     </configuration>
     <configuration name="OrderDAO" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.wholesalemanagementsystem.dao.OrderDAO" />
-      <module name="wholesale-managment-system" />
+      <module name="wholesale-management-system" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.example.wholesalemanagementsystem.dao.*" />
@@ -149,7 +152,7 @@
     </configuration>
     <configuration name="ProductDAO" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.wholesalemanagementsystem.dao.ProductDAO" />
-      <module name="wholesale-managment-system" />
+      <module name="wholesale-management-system" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.example.wholesalemanagementsystem.dao.*" />
@@ -206,6 +209,10 @@
       <workItem from="1705662859059" duration="22201000" />
       <workItem from="1705725625550" duration="14223000" />
       <workItem from="1705810480220" duration="1144000" />
+      <workItem from="1705828914848" duration="84000" />
+      <workItem from="1705829024657" duration="17000" />
+      <workItem from="1705829396615" duration="2650000" />
+      <workItem from="1705832085714" duration="2493000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />

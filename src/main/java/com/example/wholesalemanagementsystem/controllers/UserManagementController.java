@@ -1,12 +1,15 @@
 package com.example.wholesalemanagementsystem.controllers;
 
+import com.example.wholesalemanagementsystem.Main;
 import com.example.wholesalemanagementsystem.dao.UserDOA;
 import com.example.wholesalemanagementsystem.models.User;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableCell;
 import javafx.scene.control.TableColumn;
@@ -76,6 +79,16 @@ public class UserManagementController extends SceneController implements Initial
                         btn.setOnAction((ActionEvent event) -> {
                             User user = getTableView().getItems().get(getIndex());
                             System.out.println("Button clicked for user: " + user);
+                            try{
+                                FXMLLoader loader = new FXMLLoader(Main.class.getResource("userDetail.fxml"));
+                                Parent root = loader.load();
+                                UserDetailController userDetailController = loader.getController();
+                                userDetailController.fillUserDetails(user);
+                                allScene(root, event);
+
+                            } catch (Exception e) {
+                                e.printStackTrace();
+                            }
                         });
                     }
 

@@ -71,19 +71,17 @@ public class OrderDAO {
         String query = "SELECT * FROM `Order` WHERE OrderID = ?";
         PreparedStatement statement = connection.prepareStatement(query);
         statement.setString(1, String.valueOf(id));
-        Order order = null;
-        var resultSet = statement.executeQuery();
-        if (resultSet.next()) {
-            order = new Order(
-                    resultSet.getInt("OrderID"),
-                    resultSet.getInt("User_ID"),
-                    resultSet.getString("OrderDate"),
-                    resultSet.getFloat("TotalAmount"),
-                    resultSet.getString("PaymentStatus"),
-                    resultSet.getString("ShippingAddress")
-            );
-        }
-        return order;
+
+        return getOrder(statement);
+
+    }
+
+    public ArrayList<Order> getOrderByUserId(int userId) throws SQLException {
+        connection = DatabaseController.connect();
+        String query = "SELECT * FROM `Order` WHERE User_ID = ?";
+        PreparedStatement statement = connection.prepareStatement(query);
+        statement.setString(1, String.valueOf(userId));
+        return getOrders(statement);
 
     }
 
@@ -141,6 +139,22 @@ public class OrderDAO {
             ));
         }
         return orders;
+    }
+
+    static Order getOrder(PreparedStatement statement) throws SQLException {
+        Order order = null;
+        var resultSet = statement.executeQuery();
+        if (resultSet.next()) {
+            order = new Order(
+                    resultSet.getInt("OrderID"),
+                    resultSet.getInt("User_ID"),
+                    resultSet.getString("OrderDate"),
+                    resultSet.getFloat("TotalAmount"),
+                    resultSet.getString("PaymentStatus"),
+                    resultSet.getString("ShippingAddress")
+            );
+        }
+        return order;
     }
 
 
