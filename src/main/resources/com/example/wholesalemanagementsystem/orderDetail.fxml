@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.wholesalemanagementsystem.controllers.OrderDetailController">
+    <children>
+        <TableView fx:id="table" layoutY="68.0" prefHeight="325.0" prefWidth="287.0">
+            <columns>
+                <TableColumn fx:id="orderItemId" prefWidth="84.00000250339508" text="Order Item Id " />
+                <TableColumn fx:id="productId" prefWidth="66.6666488647461" text="Product Id " />
+                <TableColumn fx:id="quantity" prefWidth="75.0" text="Quantity" />
+                <TableColumn fx:id="Price" prefWidth="59.33332824707031" text="Price" />
+            </columns>
+        </TableView>
+        <Label alignment="CENTER" layoutX="-1.0" layoutY="14.0" prefHeight="43.0" prefWidth="602.0" text="Order Detail">
+            <font>
+                <Font name="Comic Sans MS Bold" size="18.0" />
+            </font>
+        </Label>
+      <VBox layoutX="314.0" layoutY="68.0" prefHeight="334.0" prefWidth="188.0">
+         <children>
+            <Label alignment="TOP_LEFT" prefHeight="31.0" prefWidth="189.0" text="Order ID">
+               <font>
+                  <Font name="Comic Sans MS" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="orderId" alignment="TOP_LEFT" layoutX="10.0" layoutY="10.0" prefHeight="31.0" prefWidth="189.0" text="-----------">
+               <font>
+                  <Font name="Comic Sans MS" size="14.0" />
+               </font>
+            </Label>
+            <Label alignment="TOP_LEFT" layoutX="10.0" layoutY="41.0" prefHeight="31.0" prefWidth="189.0" text="Order Date">
+               <font>
+                  <Font name="Comic Sans MS" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="orderDate" alignment="TOP_LEFT" layoutX="10.0" layoutY="73.0" prefHeight="31.0" prefWidth="189.0" text="----------">
+               <font>
+                  <Font name="Comic Sans MS" size="14.0" />
+               </font>
+            </Label>
+            <Label alignment="TOP_LEFT" layoutX="10.0" layoutY="104.0" prefHeight="31.0" prefWidth="189.0" text="Total Amount">
+               <font>
+                  <Font name="Comic Sans MS" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="totalAmount" alignment="TOP_LEFT" layoutX="10.0" layoutY="135.0" prefHeight="31.0" prefWidth="189.0" text="----------">
+               <font>
+                  <Font name="Comic Sans MS" size="14.0" />
+               </font>
+            </Label>
+            <Label alignment="TOP_LEFT" layoutX="10.0" layoutY="135.0" prefHeight="31.0" prefWidth="189.0" text="Payment Status">
+               <font>
+                  <Font name="Comic Sans MS" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="paymentStatus" alignment="TOP_LEFT" layoutX="10.0" layoutY="198.0" prefHeight="31.0" prefWidth="189.0" text="-----------">
+               <font>
+                  <Font name="Comic Sans MS" size="14.0" />
+               </font>
+            </Label>
+            <Label alignment="TOP_LEFT" layoutX="10.0" layoutY="229.0" prefHeight="31.0" prefWidth="189.0" text="Shipping Address">
+               <font>
+                  <Font name="Comic Sans MS" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="shippingAddress" alignment="TOP_LEFT" layoutX="10.0" layoutY="261.0" prefHeight="31.0" prefWidth="189.0" text="-----------">
+               <font>
+                  <Font name="Comic Sans MS" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+    </children>
+
+</AnchorPane>
