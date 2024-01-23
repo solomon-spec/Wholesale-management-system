@@ -4,13 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ea92ddbc-1357-4050-ad08-dff896fc8354" name="Changes" comment="Single order management">
+    <list default="true" id="ea92ddbc-1357-4050-ad08-dff896fc8354" name="Changes" comment="Redo user detail controller">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/databaseSchema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/lib/databaseSchema.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/wholesalemanagementsystem/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/wholesalemanagementsystem/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/wholesalemanagementsystem/controllers/UserDetailController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/wholesalemanagementsystem/controllers/UserDetailController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/wholesalemanagementsystem/dao/CartDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/wholesalemanagementsystem/dao/CartDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/wholesalemanagementsystem/dao/ProductDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/wholesalemanagementsystem/dao/ProductDAO.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -220,7 +216,7 @@
       <workItem from="1705832085714" duration="9916000" />
       <workItem from="1705915584614" duration="9411000" />
       <workItem from="1705993002524" duration="72000" />
-      <workItem from="1705993097440" duration="987000" />
+      <workItem from="1705993097440" duration="2351000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -406,7 +402,39 @@
       <option name="project" value="LOCAL" />
       <updated>1705909176517</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Update database product table">
+      <option name="closed" value="true" />
+      <created>1705994117847</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1705994117847</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Bug fix">
+      <option name="closed" value="true" />
+      <created>1705994169543</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1705994169543</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Bug fix">
+      <option name="closed" value="true" />
+      <created>1705994183977</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1705994183977</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Redo user detail controller">
+      <option name="closed" value="true" />
+      <created>1705994216091</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1705994216091</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -418,7 +446,6 @@
     <MESSAGE value="Database Setup" />
     <MESSAGE value="Login functionality" />
     <MESSAGE value="Add Sign UP" />
-    <MESSAGE value="Bug fix" />
     <MESSAGE value="Added entities" />
     <MESSAGE value="Product DAO" />
     <MESSAGE value="Order Model" />
@@ -434,7 +461,10 @@
     <MESSAGE value="Product DOA bug fix" />
     <MESSAGE value="Order detail controller" />
     <MESSAGE value="Single order management" />
-    <option name="LAST_COMMIT_MESSAGE" value="Single order management" />
+    <MESSAGE value="Update database product table" />
+    <MESSAGE value="Bug fix" />
+    <MESSAGE value="Redo user detail controller" />
+    <option name="LAST_COMMIT_MESSAGE" value="Redo user detail controller" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
