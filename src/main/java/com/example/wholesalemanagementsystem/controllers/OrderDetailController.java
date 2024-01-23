@@ -1,11 +1,17 @@
 package com.example.wholesalemanagementsystem.controllers;
 
+import com.example.wholesalemanagementsystem.models.Order;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 
-public class OrderDetailController extends SceneController {
+import java.net.URL;
+import java.util.ResourceBundle;
+
+public class OrderDetailController  extends SceneController implements Initializable {
 
 
     @FXML
@@ -22,7 +28,7 @@ public class OrderDetailController extends SceneController {
     @FXML
     private Label shippingAddress;
     @FXML
-    private TableColumn<?, ?> productId;
+    private TableColumn<?,?> productId;
 
     @FXML
     private TableColumn<?, ?> quantity;
@@ -33,5 +39,9 @@ public class OrderDetailController extends SceneController {
     private TableColumn<?, ?> Price;
     @FXML
     private TableView<?> table;
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+
+    }
+
 
 }

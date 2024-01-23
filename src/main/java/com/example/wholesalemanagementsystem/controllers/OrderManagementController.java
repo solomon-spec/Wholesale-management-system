@@ -60,6 +60,8 @@ public class OrderManagementController extends SceneController implements Initia
         try {
             OrderDAO orderDAO = new OrderDAO();
             orders.addAll(orderDAO.getAllOrders());
+            table.setItems(orders);
+            System.out.println("here");
 
         } catch (SQLException e) {
             throw new RuntimeException(e);
