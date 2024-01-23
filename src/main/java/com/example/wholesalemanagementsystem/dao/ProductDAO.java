@@ -13,14 +13,14 @@ public class ProductDAO {
 
     public Product getProductById(int id) throws SQLException {
         connection = DatabaseController.connect();
-        String query = "SELECT * FROM products WHERE product_id = ?";
+        String query = "SELECT * FROM product WHERE productId = ?";
         PreparedStatement statement = connection.prepareStatement(query);
         statement.setString(1, String.valueOf(id));
         ResultSet resultSet = statement.executeQuery();
         if (resultSet.next()) {
             return new Product(
-                    resultSet.getInt("ProductName"),
-                    resultSet.getString("name"),
+                    resultSet.getInt("ProductId"),
+                    resultSet.getString("ProductName"),
                     resultSet.getString("description"),
                     resultSet.getFloat("price"),
                     resultSet.getInt("QuantityInStock")

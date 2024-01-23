@@ -10,32 +10,23 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
+import javafx.scene.control.cell.PropertyValueFactory;
 
+import java.net.URL;
+import java.sql.SQLException;
+import java.util.ResourceBundle;
 
 public class UserDetailController extends SceneController implements Initializable {
 
     @FXML
-    private TableColumn<Order,String> PaymentStatus;
-
-    @FXML
-    private TableColumn<Order,String> shippingAddress;
-
-    @FXML
-    private TableColumn<Order, Float> totalAmount;
-
-    @FXML
-    private TableColumn<Order, Integer> userId;
-    @FXML
-    private TableColumn<Order, String> orderDate;
-
-    @FXML
-    private TableColumn<Order,Integer> orderId;
-
-    @FXML
-    private TableView<Order> orderTable;
+    private TextField username;
 
     @FXML
     private TextField password;
+
+    @FXML
+    private TextField registrationDate;
+
     @FXML
     private TextField email;
 
@@ -46,42 +37,72 @@ public class UserDetailController extends SceneController implements Initializab
     private TextField lname;
 
     @FXML
-    private TextField registrationDate;
-
-    @FXML
     private TextField name;
 
     @FXML
-    private TextField username;
+    private TableColumn<Order, String> orderDate;
 
-    private ObservableList<Order> orders = FXCollections.observableArrayList();
-    private int id ;
+    @FXML
+    private TableColumn<Order, Integer> orderId;
 
-    @Override
-    public void initialize(java.net.URL url, java.util.ResourceBundle resourceBundle) {
-        orderId.setCellValueFactory(new javafx.scene.control.cell.PropertyValueFactory<Order, Integer>("orderId"));
-        userId.setCellValueFactory(new javafx.scene.control.cell.PropertyValueFactory<Order, Integer>("userId"));
-        orderDate.setCellValueFactory(new javafx.scene.control.cell.PropertyValueFactory<Order, String>("orderDate"));
-        totalAmount.setCellValueFactory(new javafx.scene.control.cell.PropertyValueFactory<Order, Float>("totalAmount"));
-        shippingAddress.setCellValueFactory(new javafx.scene.control.cell.PropertyValueFactory<Order, String>("shippingAddress"));
-        PaymentStatus.setCellValueFactory(new javafx.scene.control.cell.PropertyValueFactory<Order, String>("paymentStatus"));
-        try{
-            OrderDAO orderDOA = new OrderDAO();
-            orders.addAll(orderDOA.getOrderByUserId(id));
-            orderTable.setItems(orders);
-        }
-        catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
+    @FXML
+    private TableView<Order> orderTable;
+
+    @FXML
+    private TableColumn<Order, String> shippingAddress;
+
+    @FXML
+    private TableColumn<Order,Float> totalAmount;
+
+    @FXML
+    private TableColumn<Order,Integer> userId;
+    @FXML
+    private TableColumn<Order,String> PaymentStatus;
+
+    private int id;
+
+
     public void fillUserDetails(User user) {
-        userId.setText(String.valueOf(user.getUserId()));
         username.setText(user.getUserName());
-        email.setText(user.getEmail());
         name.setText(user.getFirstName());
         lname.setText(user.getLastName());
-        password.setText(user.getPassword());
+        email.setText(user.getEmail());
         gender.setText(user.getGender());
-        id = user.getUserId();
+        password.setText(user.getPassword());
+        this.id = user.getUserId();
+        fillOrderTable();
+
+    }
+    public void fillOrderTable(){
+        ObservableList<Order> orders = FXCollections.observableArrayList();
+        OrderDAO orderDAO = new OrderDAO();
+        try{
+            orders.addAll(orderDAO.getOrderByUserId(id));
+
+            orderTable.setItems(orders);
+        }
+        catch (SQLException e){
+            System.out.println(e.getMessage());
+        }
+    }
+    public void changeField(boolean value){
+        username.setEditable(value);
+        name.setEditable(value);
+        lname.setEditable(value);
+        email.setEditable(value);
+        password.setEditable(value);
+        gender.setEditable(value);
+    }
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        orderId.setCellValueFactory(new PropertyValueFactory<Order, Integer>("orderId"));
+        userId.setCellValueFactory(new PropertyValueFactory<Order, Integer>("userId"));
+        orderDate.setCellValueFactory(new PropertyValueFactory<Order, String>("orderDate"));
+        totalAmount.setCellValueFactory(new PropertyValueFactory<Order, Float>("totalAmount"));
+        PaymentStatus.setCellValueFactory(new PropertyValueFactory<Order, String>("paymentStatus"));
+        shippingAddress.setCellValueFactory(new PropertyValueFactory<Order, String>("shippingAddress"));
+
+
     }
 }
