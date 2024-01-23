@@ -21,23 +21,17 @@ public class CartDAO {
         return getOrders(statement);
 
     }
-
     // get user cart
     public ArrayList<Product> getUserCart(int userId) throws SQLException {
         connection = DatabaseController.connect();
-        String query = "SELECT * FROM Cart WHERE User_ID = ?";
+        String query = "SELECT ProductID FROM Cart WHERE User_ID = ?";
         PreparedStatement statement = connection.prepareStatement(query);
         statement.setString(1, String.valueOf(userId));
         ArrayList<Product> products = new ArrayList<>();
         var resultSet = statement.executeQuery();
+        ProductDAO productDAO = new ProductDAO();
         while (resultSet.next()) {
-            products.add(new Product(
-                    resultSet.getInt("ProductID"),
-                    resultSet.getString("ProductName"),
-                    resultSet.getString("description"),
-                    resultSet.getFloat("price"),
-                    resultSet.getInt("QuantityInStock")
-            ));
+            products.add(productDAO.getProductById(resultSet.getInt("ProductID")));
         }
 
         return products;
@@ -47,7 +41,7 @@ public class CartDAO {
     // total cost of user cart
     public float totalCost(int userId) throws SQLException{
         connection = DatabaseController.connect();
-        String query = "SELECT price FROM Cart WHERE User_ID = ?";
+        String query = "SELECT price FROM Cart INNER JOIN product ON Cart.ProductID = product.ProductId WHERE User_ID = ?";
         PreparedStatement statement = connection.prepareStatement(query);
         statement.setString(1, String.valueOf(userId));
         ArrayList<Product> products = new ArrayList<>();
@@ -113,28 +107,43 @@ public class CartDAO {
     // checkout from cart remove from cart and add all product to order item and create order
     public boolean checkout(int userId, String shippingAddress) throws SQLException {
         connection = DatabaseController.connect();
+        // check if cart is empty
+        if (getUserCart(userId).isEmpty()) {
+            return false;
+        }
+
         String query = "INSERT INTO `Order` (User_ID, OrderDate, TotalAmount, PaymentStatus, ShippingAddress) VALUES (?, ?, ?, ?, ?)";
-        PreparedStatement statement = connection.prepareStatement(query);
+        PreparedStatement statement = connection.prepareStatement(query, PreparedStatement.RETURN_GENERATED_KEYS);
         statement.setString(1, String.valueOf(userId));
         statement.setString(2, String.valueOf(java.time.LocalDate.now()));
         statement.setString(3, String.valueOf(totalCost(userId)));
         statement.setString(4, "Pending");
         statement.setString(5, shippingAddress);
         int rowsInserted = statement.executeUpdate();
-        int orderId = statement.getGeneratedKeys().getInt(1);
+//        int orderId = statement.getGeneratedKeys().getInt(1);
+        int orderId = 0;
+        var resultSet = statement.getGeneratedKeys();
+        if (resultSet.next()) {
+            orderId = resultSet.getInt(1);
+
+        }
+        else{
+            System.out.println("Error in getting order id");
+        }
         // add all product in orderItem table
         query = "INSERT INTO OrderItem (OrderID, ProductID, Quantity, Price) VALUES (?, ?, ?, ?)";
         statement = connection.prepareStatement(query);
         statement.setString(1, String.valueOf(orderId));
-        statement.setString(2, String.valueOf(userId));
         for (Product product: getUserCart(userId)) {
-            statement.setString(3, String.valueOf(product.getProductId()));
-            statement.setString(4, String.valueOf(product.getQuantity()));
-            statement.setString(5, String.valueOf(product.getPrice()));
+            statement.setString(2, String.valueOf(product.getProductId()));
+            statement.setString(3, String.valueOf(product.getQuantity()));
+            statement.setString(4, String.valueOf(product.getPrice()));
             statement.executeUpdate();
         }
         clearCart(userId);
         return rowsInserted > 0;
+
+
 
     }
 
