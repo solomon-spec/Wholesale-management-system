@@ -19,8 +19,8 @@ public class ProductDAO {
         ResultSet resultSet = statement.executeQuery();
         if (resultSet.next()) {
             return new Product(
-                    resultSet.getInt("ProductName"),
-                    resultSet.getString("name"),
+                    resultSet.getInt("ProductId"),
+                    resultSet.getString("ProductName"),
                     resultSet.getString("description"),
                     resultSet.getFloat("price"),
                     resultSet.getInt("QuantityInStock")
