@@ -59,7 +59,7 @@ public class UserDetailController extends SceneController implements Initializab
     @FXML
     private TableColumn<Order,String> PaymentStatus;
 
-    private User user;
+    private int id;
 
 
     public void fillUserDetails(User user) {
@@ -69,6 +69,21 @@ public class UserDetailController extends SceneController implements Initializab
         email.setText(user.getEmail());
         gender.setText(user.getGender());
         password.setText(user.getPassword());
+        this.id = user.getUserId();
+        fillOrderTable();
+
+    }
+    public void fillOrderTable(){
+        ObservableList<Order> orders = FXCollections.observableArrayList();
+        OrderDAO orderDAO = new OrderDAO();
+        try{
+            orders.addAll(orderDAO.getOrderByUserId(id));
+
+            orderTable.setItems(orders);
+        }
+        catch (SQLException e){
+            System.out.println(e.getMessage());
+        }
     }
     public void changeField(boolean value){
         username.setEditable(value);
@@ -88,15 +103,6 @@ public class UserDetailController extends SceneController implements Initializab
         PaymentStatus.setCellValueFactory(new PropertyValueFactory<Order, String>("paymentStatus"));
         shippingAddress.setCellValueFactory(new PropertyValueFactory<Order, String>("shippingAddress"));
 
-        ObservableList<Order> orders = FXCollections.observableArrayList();
-        OrderDAO orderDAO = new OrderDAO();
-        try{
-            orders.addAll(orderDAO.getOrderByUserId(user.getUserId()));
-            orderTable.setItems(orders);
-        }
-        catch (SQLException e){
-            System.out.println(e.getMessage());
-        }
 
     }
 }
