@@ -41,6 +41,7 @@ public class OrderDAO {
 
     }
 
+
     public boolean deleteOrder(int id) throws SQLException {
         connection = DatabaseController.connect();
         String query = "DELETE FROM `Order` WHERE OrderID = ?";
@@ -94,15 +95,6 @@ public class OrderDAO {
 
     }
 
-    // search order by user id
-    public ArrayList<Order> searchOrderByUserId(int userId) throws SQLException {
-        connection = DatabaseController.connect();
-        String query = "SELECT * FROM `Order` WHERE User_ID = ?";
-        PreparedStatement statement = connection.prepareStatement(query);
-        statement.setString(1, String.valueOf(userId));
-        return getOrders(statement);
-
-    }
 
     // search order by payment status
     public ArrayList<Order> searchOrderByPaymentStatus(String paymentStatus) throws SQLException {
