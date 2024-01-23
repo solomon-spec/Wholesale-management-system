@@ -78,8 +78,13 @@ public class OrderManagementController extends SceneController implements Initia
                         btn.setOnAction((ActionEvent event) -> {
                             Order order = getTableView().getItems().get(getIndex());
                             System.out.println("Button clicked for order: " + order);
+
                             try{
-                                System.out.println("here");
+                                FXMLLoader loader = new FXMLLoader(Main.class.getResource("orderDetail.fxml"));
+                                Parent root = loader.load();
+                                OrderDetailController orderDetailController = loader.getController();
+                                orderDetailController.fillOrderItemTable(order);
+                                allScene(root, event);
 
                             } catch (Exception e) {
                                 e.printStackTrace();

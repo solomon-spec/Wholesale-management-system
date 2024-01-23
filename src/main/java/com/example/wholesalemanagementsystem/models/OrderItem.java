@@ -7,6 +7,8 @@ public class OrderItem {
     private int quantity;
     private float price;
 
+
+
     public OrderItem(int id, int orderId, int productId, int quantity, float price) {
         this.id = id;
         this.orderId = orderId;
