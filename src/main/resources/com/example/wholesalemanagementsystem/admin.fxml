@@ -14,9 +14,9 @@
             <Font size="29.0" />
          </font>
       </Label>
-      <Button fx:id="userManagement" layoutX="376.0" layoutY="110.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="142.0" text="User Management " />
-      <Button fx:id="orderManagement" layoutX="376.0" layoutY="178.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="142.0" text="Order Management" />
-      <Button fx:id="productManagement" layoutX="376.0" layoutY="247.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="142.0" text="Product Management" />
+      <Button fx:id="userManagement" layoutX="376.0" layoutY="110.0" onAction="#toUserManagementScene" mnemonicParsing="false" prefHeight="44.0" prefWidth="142.0" text="User Management " />
+      <Button fx:id="orderManagement" layoutX="376.0" layoutY="178.0" onAction="#toOrderManagementScene" mnemonicParsing="false" prefHeight="44.0" prefWidth="142.0" text="Order Management" />
+      <Button fx:id="productManagement" layoutX="376.0" layoutY="247.0" onAction="#toProductManagementScene" mnemonicParsing="false" prefHeight="44.0" prefWidth="142.0" text="Product Management" />
       <ImageView fitHeight="400.0" fitWidth="412.0" layoutX="-81.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@icon-1.png" />

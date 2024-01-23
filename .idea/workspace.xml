@@ -4,12 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ea92ddbc-1357-4050-ad08-dff896fc8354" name="Changes" comment="Order dao clean up">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/wholesalemanagementsystem/dao/OrderItemDOA.java" afterDir="false" />
+    <list default="true" id="ea92ddbc-1357-4050-ad08-dff896fc8354" name="Changes" comment="Order management functionality">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/wholesalemanagementsystem/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/wholesalemanagementsystem/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/wholesalemanagementsystem/controllers/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/wholesalemanagementsystem/controllers/AdminController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/wholesalemanagementsystem/controllers/OrderDetailController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/wholesalemanagementsystem/controllers/OrderDetailController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/wholesalemanagementsystem/controllers/OrderManagementController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/wholesalemanagementsystem/controllers/OrderManagementController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/wholesalemanagementsystem/models/OrderItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/wholesalemanagementsystem/models/OrderItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/wholesalemanagementsystem/controllers/SceneController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/wholesalemanagementsystem/controllers/SceneController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/wholesalemanagementsystem/admin.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/wholesalemanagementsystem/admin.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -219,7 +220,7 @@
       <workItem from="1705832085714" duration="9916000" />
       <workItem from="1705915584614" duration="9411000" />
       <workItem from="1705993002524" duration="72000" />
-      <workItem from="1705993097440" duration="6551000" />
+      <workItem from="1705993097440" duration="7479000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -469,7 +470,15 @@
       <option name="project" value="LOCAL" />
       <updated>1706002947413</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="Order management functionality">
+      <option name="closed" value="true" />
+      <created>1706004171273</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1706004171274</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -487,7 +496,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Login fxml" />
     <MESSAGE value="Database Setup" />
     <MESSAGE value="Login functionality" />
     <MESSAGE value="Add Sign UP" />
@@ -512,7 +520,8 @@
     <MESSAGE value="Implemented table populating for user detail." />
     <MESSAGE value="Order Item model" />
     <MESSAGE value="Order dao clean up" />
-    <option name="LAST_COMMIT_MESSAGE" value="Order dao clean up" />
+    <MESSAGE value="Order management functionality" />
+    <option name="LAST_COMMIT_MESSAGE" value="Order management functionality" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

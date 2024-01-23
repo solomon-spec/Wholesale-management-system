@@ -40,14 +40,14 @@ public class SceneController {
         stage.show();
     }
     public void ProductManagementScene(ActionEvent e) throws IOException {
-        Parent root = FXMLLoader.load(Objects.requireNonNull(Main.class.getResource("userManagement.fxml")));
+        Parent root = FXMLLoader.load(Objects.requireNonNull(Main.class.getResource("productManagement.fxml")));
         stage = (Stage)(((Node)e.getSource()).getScene().getWindow());
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
     }
     public void orderManagementScene(ActionEvent e) throws IOException {
-        Parent root = FXMLLoader.load(Objects.requireNonNull(Main.class.getResource("userManagement.fxml")));
+        Parent root = FXMLLoader.load(Objects.requireNonNull(Main.class.getResource("orderManagement.fxml")));
         stage = (Stage)(((Node)e.getSource()).getScene().getWindow());
         scene = new Scene(root);
         stage.setScene(scene);

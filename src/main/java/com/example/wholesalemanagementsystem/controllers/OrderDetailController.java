@@ -54,7 +54,6 @@ public class OrderDetailController  extends SceneController implements Initializ
     }
 
     public void fillOrderItemTable(Order order){
-//
 
         orderDate.setText(order.getOrderDate());
         paymentStatus.setText(order.getPaymentStatus());
