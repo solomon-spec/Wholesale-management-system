@@ -4,8 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ea92ddbc-1357-4050-ad08-dff896fc8354" name="Changes" comment="user table bug fix">
+    <list default="true" id="ea92ddbc-1357-4050-ad08-dff896fc8354" name="Changes" comment="Typo">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/wholesalemanagementsystem/controllers/ProductManagementController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/wholesalemanagementsystem/productManagement.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/wholesalemanagementsystem/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/wholesalemanagementsystem/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,11 +68,11 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;extract.method.default.visibility&quot;: &quot;private&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;order-managenemt&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;product-mamagement&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;last_directory_selection&quot;: &quot;C:/Users/solom/IdeaProjects/wholesale-managment-system/src/main/java/com/example/wholesalemanagementsystem&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/solom/IdeaProjects/wholesale-managment-system/lib/mysql-connector-j-8.2.0.jar&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/solom/SceneBuilder/SceneBuilder.exe&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -88,9 +91,6 @@
   }
 }</component>
   <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.example.wholesalemanagementsystem.controllers" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\solom\IdeaProjects\wholesale-managment-system\src\main\resources\com\example\wholesalemanagmentsystem" />
       <recent name="C:\Users\solom\IdeaProjects\wholesale-managment-system\src" />
@@ -212,10 +212,9 @@
       <workItem from="1705828914848" duration="84000" />
       <workItem from="1705829024657" duration="17000" />
       <workItem from="1705829396615" duration="2650000" />
-      <workItem from="1705832085714" duration="9916000" />
-      <workItem from="1705915584614" duration="9411000" />
-      <workItem from="1705993002524" duration="72000" />
-      <workItem from="1705993097440" duration="8860000" />
+      <workItem from="1705832085714" duration="2493000" />
+      <workItem from="1706007412079" duration="5020000" />
+      <workItem from="1706071377396" duration="96000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -361,153 +360,19 @@
       <option name="project" value="LOCAL" />
       <updated>1705808763537</updated>
     </task>
-    <task id="LOCAL-00019" summary="Bug fix on resource">
-      <option name="closed" value="true" />
-      <created>1705835172584</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1705835172585</updated>
-    </task>
-    <task id="LOCAL-00020" summary="add Unversioned files">
-      <option name="closed" value="true" />
-      <created>1705835234717</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1705835234717</updated>
-    </task>
-    <task id="LOCAL-00021" summary="Product DOA bug fix">
-      <option name="closed" value="true" />
-      <created>1705909040951</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1705909040951</updated>
-    </task>
-    <task id="LOCAL-00022" summary="Order detail controller">
-      <option name="closed" value="true" />
-      <created>1705909132444</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1705909132444</updated>
-    </task>
-    <task id="LOCAL-00023" summary="Single order management">
-      <option name="closed" value="true" />
-      <created>1705909176516</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1705909176517</updated>
-    </task>
-    <task id="LOCAL-00024" summary="Update database product table">
-      <option name="closed" value="true" />
-      <created>1705994117847</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1705994117847</updated>
-    </task>
-    <task id="LOCAL-00025" summary="Bug fix">
-      <option name="closed" value="true" />
-      <created>1705994169543</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1705994169543</updated>
-    </task>
-    <task id="LOCAL-00026" summary="Bug fix">
-      <option name="closed" value="true" />
-      <created>1705994183977</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1705994183977</updated>
-    </task>
-    <task id="LOCAL-00027" summary="Redo user detail controller">
-      <option name="closed" value="true" />
-      <created>1705994216091</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1705994216091</updated>
-    </task>
-    <task id="LOCAL-00028" summary="Implemented table populating for user detail.">
-      <option name="closed" value="true" />
-      <created>1705995600805</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1705995600805</updated>
-    </task>
-    <task id="LOCAL-00029" summary="Implemented table populating for user detail.">
-      <option name="closed" value="true" />
-      <created>1705995608531</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1705995608531</updated>
-    </task>
-    <task id="LOCAL-00030" summary="Order Item model">
-      <option name="closed" value="true" />
-      <created>1705996169966</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1705996169966</updated>
-    </task>
-    <task id="LOCAL-00031" summary="Order dao clean up">
-      <option name="closed" value="true" />
-      <created>1706002947413</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1706002947413</updated>
-    </task>
-    <task id="LOCAL-00032" summary="Order management functionality">
-      <option name="closed" value="true" />
-      <created>1706004171273</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1706004171274</updated>
-    </task>
-    <task id="LOCAL-00033" summary="connect with admin page">
-      <option name="closed" value="true" />
-      <created>1706004939820</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1706004939820</updated>
-    </task>
-    <task id="LOCAL-00034" summary="user table bug fix">
-      <option name="closed" value="true" />
-      <created>1706005263380</created>
-      <option name="number" value="00034" />
-      <option name="presentableId" value="LOCAL-00034" />
-      <option name="project" value="LOCAL" />
-      <updated>1706005263380</updated>
-    </task>
-    <option name="localTasksCounter" value="35" />
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
   <component name="VcsManagerConfiguration">
+    <MESSAGE value="Initial commit" />
+    <MESSAGE value="Login fxml" />
+    <MESSAGE value="Database Setup" />
+    <MESSAGE value="Login functionality" />
     <MESSAGE value="Add Sign UP" />
+    <MESSAGE value="Bug fix" />
     <MESSAGE value="Added entities" />
     <MESSAGE value="Product DAO" />
     <MESSAGE value="Order Model" />
@@ -518,21 +383,7 @@
     <MESSAGE value="Scene Update" />
     <MESSAGE value="User management table buttons" />
     <MESSAGE value="Typo" />
-    <MESSAGE value="Bug fix on resource" />
-    <MESSAGE value="add Unversioned files" />
-    <MESSAGE value="Product DOA bug fix" />
-    <MESSAGE value="Order detail controller" />
-    <MESSAGE value="Single order management" />
-    <MESSAGE value="Update database product table" />
-    <MESSAGE value="Bug fix" />
-    <MESSAGE value="Redo user detail controller" />
-    <MESSAGE value="Implemented table populating for user detail." />
-    <MESSAGE value="Order Item model" />
-    <MESSAGE value="Order dao clean up" />
-    <MESSAGE value="Order management functionality" />
-    <MESSAGE value="connect with admin page" />
-    <MESSAGE value="user table bug fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="user table bug fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="Typo" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
