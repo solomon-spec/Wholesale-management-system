@@ -68,11 +68,11 @@ public class ProductManagementController extends SceneController implements Init
                             System.out.println("Button clicked for Product: " + product);
 
                             try{
-//                                FXMLLoader loader = new FXMLLoader(Main.class.getResource("productDetail.fxml"));
-//                                Parent root = loader.load();
-//                                ProductDetailController orderDetailController = loader.getController();
-//                                orderDetailController.fillOrderItemTable(product);
-//                                allScene(root, event);
+                                FXMLLoader loader = new FXMLLoader(Main.class.getResource("productDetail.fxml"));
+                                Parent root = loader.load();
+                                ProductDetailController productDetailController = loader.getController();
+                                productDetailController.fillData(product);
+                                allScene(root, event);
 
                             } catch (Exception e) {
                                 e.printStackTrace();
