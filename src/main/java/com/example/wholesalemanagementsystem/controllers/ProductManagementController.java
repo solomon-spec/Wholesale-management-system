@@ -2,7 +2,6 @@ package com.example.wholesalemanagementsystem.controllers;
 
 import com.example.wholesalemanagementsystem.Main;
 import com.example.wholesalemanagementsystem.dao.ProductDAO;
-import com.example.wholesalemanagementsystem.models.Order;
 import com.example.wholesalemanagementsystem.models.Product;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
