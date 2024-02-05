@@ -24,7 +24,7 @@ public class CartDAO {
     // get user cart
     public ArrayList<Product> getUserCart(int userId) throws SQLException {
         connection = DatabaseController.connect();
-        String query = "SELECT ProductID FROM Cart WHERE User_ID = ?";
+        String query = "SELECT ProductID FROM cart WHERE User_ID = ?";
         PreparedStatement statement = connection.prepareStatement(query);
         statement.setString(1, String.valueOf(userId));
         ArrayList<Product> products = new ArrayList<>();
@@ -41,7 +41,7 @@ public class CartDAO {
     // total cost of user cart
     public float totalCost(int userId) throws SQLException{
         connection = DatabaseController.connect();
-        String query = "SELECT price FROM Cart INNER JOIN product ON Cart.ProductID = product.ProductId WHERE User_ID = ?";
+        String query = "SELECT price FROM cart INNER JOIN product ON Cart.ProductID = product.ProductId WHERE User_ID = ?";
         PreparedStatement statement = connection.prepareStatement(query);
         statement.setString(1, String.valueOf(userId));
         ArrayList<Product> products = new ArrayList<>();
@@ -58,7 +58,7 @@ public class CartDAO {
     // add product to cart
     public boolean addProductToCart(int userId, int productId, int quantity) throws SQLException {
         connection = DatabaseController.connect();
-        String query = "INSERT INTO Cart (User_ID, ProductID, Quantity) VALUES (?, ?, ?)";
+        String query = "INSERT INTO cart (User_ID, ProductID, Quantity) VALUES (?, ?, ?)";
         PreparedStatement statement = connection.prepareStatement(query);
         statement.setString(1, String.valueOf(userId));
         statement.setString(2, String.valueOf(productId));
@@ -71,7 +71,7 @@ public class CartDAO {
     // remove product from cart
     public boolean removeProductFromCart(int userId, int productId) throws SQLException {
         connection = DatabaseController.connect();
-        String query = "DELETE FROM Cart WHERE User_ID = ? AND ProductID = ?";
+        String query = "DELETE FROM cart WHERE User_ID = ? AND ProductID = ?";
         PreparedStatement statement = connection.prepareStatement(query);
         statement.setString(1, String.valueOf(userId));
         statement.setString(2, String.valueOf(productId));
@@ -83,7 +83,7 @@ public class CartDAO {
     // update product quantity in cart
     public boolean updateProductQuantityInCart(int userId, int productId, int quantity) throws SQLException {
         connection = DatabaseController.connect();
-        String query = "UPDATE Cart SET Quantity = ? WHERE User_ID = ? AND ProductID = ?";
+        String query = "UPDATE cart SET Quantity = ? WHERE User_ID = ? AND ProductID = ?";
         PreparedStatement statement = connection.prepareStatement(query);
         statement.setString(1, String.valueOf(quantity));
         statement.setString(2, String.valueOf(userId));
@@ -96,7 +96,7 @@ public class CartDAO {
     // clear cart
     public boolean clearCart(int userId) throws SQLException {
         connection = DatabaseController.connect();
-        String query = "DELETE FROM Cart WHERE User_ID = ?";
+        String query = "DELETE FROM cart WHERE User_ID = ?";
         PreparedStatement statement = connection.prepareStatement(query);
         statement.setString(1, String.valueOf(userId));
         int rowsInserted = statement.executeUpdate();
@@ -112,7 +112,7 @@ public class CartDAO {
             return false;
         }
 
-        String query = "INSERT INTO `Order` (User_ID, OrderDate, TotalAmount, PaymentStatus, ShippingAddress) VALUES (?, ?, ?, ?, ?)";
+        String query = "INSERT INTO `order` (User_ID, OrderDate, TotalAmount, PaymentStatus, ShippingAddress) VALUES (?, ?, ?, ?, ?)";
         PreparedStatement statement = connection.prepareStatement(query, PreparedStatement.RETURN_GENERATED_KEYS);
         statement.setString(1, String.valueOf(userId));
         statement.setString(2, String.valueOf(java.time.LocalDate.now()));
@@ -131,7 +131,7 @@ public class CartDAO {
             System.out.println("Error in getting order id");
         }
         // add all product in orderItem table
-        query = "INSERT INTO OrderItem (OrderID, ProductID, Quantity, Price) VALUES (?, ?, ?, ?)";
+        query = "INSERT INTO orderItem (OrderID, ProductID, Quantity, Price) VALUES (?, ?, ?, ?)";
         statement = connection.prepareStatement(query);
         statement.setString(1, String.valueOf(orderId));
         for (Product product: getUserCart(userId)) {

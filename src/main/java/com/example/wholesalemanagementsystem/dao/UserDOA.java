@@ -16,7 +16,7 @@ public class UserDOA {
     // get user by id
     public User getUserById(int id)  throws SQLException {
         connection = DatabaseController.connect();
-        String query = "SELECT * FROM  WHERE user_id = ?";
+        String query = "SELECT * FROM user WHERE user_id = ?";
         PreparedStatement statement = connection.prepareStatement(query);
         statement.setString(1, String.valueOf(id));
         ResultSet resultSet = statement.executeQuery();
@@ -36,6 +36,30 @@ public class UserDOA {
         }
 
         return null;
+    }
+    public User getUserByUsername(String username) throws  SQLException{
+        connection = DatabaseController.connect();
+        String query = "SELECT * FROM user  WHERE username = ?";
+        PreparedStatement statement = connection.prepareStatement(query);
+        statement.setString(1, username);
+        ResultSet resultSet = statement.executeQuery();
+        if(resultSet.next()){
+            User user = new User(
+                    resultSet.getInt("user_id"),
+                    resultSet.getString("username"),
+                    resultSet.getString("password"),
+                    resultSet.getString("email"),
+                    resultSet.getString("first_name"),
+                    resultSet.getString("last_name"),
+                    resultSet.getString("gender"),
+                    resultSet.getBoolean("is_admin"),
+                    new CartDAO().getUserCart(resultSet.getInt("user_id"))
+            );
+            return user;
+        }
+
+        return null;
+
     }
     // get all users
     public ArrayList<User> getAllUser() throws SQLException {
