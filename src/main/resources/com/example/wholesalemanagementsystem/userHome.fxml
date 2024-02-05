@@ -20,8 +20,8 @@
             <Font name="FreeMono Bold" size="27.0" />
          </font>
       </Label>
-      <Button fx:id="cart" layoutX="388.0" layoutY="155.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="123.0" text="My cart" />
-      <Button fx:id="product" layoutX="388.0" layoutY="223.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="123.0" text="Products" />
+      <Button fx:id="cart" onAction="#toCartScene" layoutX="388.0" layoutY="155.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="123.0" text="My cart" />
+      <Button fx:id="product" onAction="#toProductsScene" layoutX="388.0" layoutY="223.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="123.0" text="Products" />
       <Button fx:id="profile" layoutX="388.0" layoutY="301.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="123.0" text="Profile" />
    </children>
 </AnchorPane>
