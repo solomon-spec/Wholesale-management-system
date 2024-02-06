@@ -12,7 +12,7 @@ public class OrderDAO {
 
     public boolean createOrder(Order order) throws SQLException {
         connection = DatabaseController.connect();
-        String query = "INSERT INTO `Order` (User_ID, TotalAmount, PaymentStatus, ShippingAddress) VALUES (?, ?, ?, ?)";
+        String query = "INSERT INTO `order` (User_ID, TotalAmount, PaymentStatus, ShippingAddress) VALUES (?, ?, ?, ?)";
         PreparedStatement statement = connection.prepareStatement(query);
 
         statement.setString(1, String.valueOf(order.getUserId()));
@@ -27,7 +27,7 @@ public class OrderDAO {
 
     public boolean updateOrder(Order order) throws SQLException {
         connection = DatabaseController.connect();
-        String query = "UPDATE `Order` SET User_ID = ?, TotalAmount = ?, PaymentStatus = ?, ShippingAddress = ? WHERE OrderID = ?";
+        String query = "UPDATE `order` SET User_ID = ?, TotalAmount = ?, PaymentStatus = ?, ShippingAddress = ? WHERE OrderID = ?";
         PreparedStatement statement = connection.prepareStatement(query);
 
         statement.setString(1, String.valueOf(order.getUserId()));
@@ -44,7 +44,7 @@ public class OrderDAO {
 
     public boolean deleteOrder(int id) throws SQLException {
         connection = DatabaseController.connect();
-        String query = "DELETE FROM `Order` WHERE OrderID = ?";
+        String query = "DELETE FROM `order` WHERE OrderID = ?";
         PreparedStatement statement = connection.prepareStatement(query);
         statement.setString(1, String.valueOf(id));
         int rowsInserted = statement.executeUpdate();
@@ -57,7 +57,7 @@ public class OrderDAO {
             return false;
         }
 
-        String query = "UPDATE `Order` SET PaymentStatus = ? WHERE OrderID = ?";
+        String query = "UPDATE `order` SET PaymentStatus = ? WHERE OrderID = ?";
         PreparedStatement statement = connection.prepareStatement(query);
 
         statement.setString(1, paymentStatus);
@@ -69,7 +69,7 @@ public class OrderDAO {
 
     public Order getOrderById(int id) throws SQLException {
         connection = DatabaseController.connect();
-        String query = "SELECT * FROM `Order` WHERE OrderID = ?";
+        String query = "SELECT * FROM `order` WHERE OrderID = ?";
         PreparedStatement statement = connection.prepareStatement(query);
         statement.setString(1, String.valueOf(id));
 
@@ -79,7 +79,7 @@ public class OrderDAO {
 
     public ArrayList<Order> getOrderByUserId(int userId) throws SQLException {
         connection = DatabaseController.connect();
-        String query = "SELECT * FROM `Order` WHERE User_ID = ?";
+        String query = "SELECT * FROM `order` WHERE User_ID = ?";
         PreparedStatement statement = connection.prepareStatement(query);
         statement.setString(1, String.valueOf(userId));
         return getOrders(statement);
@@ -89,7 +89,7 @@ public class OrderDAO {
 
     public ArrayList<Order> getAllOrders() throws SQLException {
         connection = DatabaseController.connect();
-        String query = "SELECT * FROM `Order`";
+        String query = "SELECT * FROM `order`";
         PreparedStatement statement = connection.prepareStatement(query);
         return getOrders(statement);
 
@@ -99,7 +99,7 @@ public class OrderDAO {
     // search order by payment status
     public ArrayList<Order> searchOrderByPaymentStatus(String paymentStatus) throws SQLException {
         connection = DatabaseController.connect();
-        String query = "SELECT * FROM `Order` WHERE PaymentStatus = ?";
+        String query = "SELECT * FROM `order` WHERE PaymentStatus = ?";
         PreparedStatement statement = connection.prepareStatement(query);
         statement.setString(1, paymentStatus);
         return getOrders(statement);
@@ -109,7 +109,7 @@ public class OrderDAO {
     // search order by total amount range
     public ArrayList<Order> searchOrderByTotalAmountRange(float min, float max) throws SQLException {
         connection = DatabaseController.connect();
-        String query = "SELECT * FROM `Order` WHERE TotalAmount BETWEEN ? AND ?";
+        String query = "SELECT * FROM `order` WHERE TotalAmount BETWEEN ? AND ?";
         PreparedStatement statement = connection.prepareStatement(query);
         statement.setString(1, String.valueOf(min));
         statement.setString(2, String.valueOf(max));

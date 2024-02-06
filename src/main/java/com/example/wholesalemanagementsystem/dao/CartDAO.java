@@ -120,7 +120,6 @@ public class CartDAO {
         statement.setString(4, "Pending");
         statement.setString(5, shippingAddress);
         int rowsInserted = statement.executeUpdate();
-//        int orderId = statement.getGeneratedKeys().getInt(1);
         int orderId = 0;
         var resultSet = statement.getGeneratedKeys();
         if (resultSet.next()) {
