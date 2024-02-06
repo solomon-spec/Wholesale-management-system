@@ -12,7 +12,7 @@ public class OrderItemDOA {
     Connection connection;
     public ArrayList<OrderItem> getOrderItems(int orderId) throws SQLException {
         connection = DatabaseController.connect();
-        String query = "SELECT * FROM OrderItem WHERE OrderID = ?";
+        String query = "SELECT * FROM javawms.orderitem WHERE OrderID = ?";
         PreparedStatement statement = connection.prepareStatement(query);
         statement.setString(1, String.valueOf(orderId));
         ResultSet resultSet = statement.executeQuery();

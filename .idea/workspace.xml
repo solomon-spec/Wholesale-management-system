@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ea92ddbc-1357-4050-ad08-dff896fc8354" name="Changes" comment="update product quantity for checkout" />
+    <list default="true" id="ea92ddbc-1357-4050-ad08-dff896fc8354" name="Changes" comment="error correction">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/wholesalemanagementsystem/controllers/UserCartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/wholesalemanagementsystem/controllers/UserCartController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/wholesalemanagementsystem/dao/CartDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/wholesalemanagementsystem/dao/CartDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/wholesalemanagementsystem/dao/OrderItemDOA.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/wholesalemanagementsystem/dao/OrderItemDOA.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/wholesalemanagementsystem/userCart.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/wholesalemanagementsystem/userCart.fxml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -221,7 +227,9 @@
       <workItem from="1707124832737" duration="4684000" />
       <workItem from="1707203116270" duration="422000" />
       <workItem from="1707234699610" duration="1194000" />
-      <workItem from="1707236004949" duration="1561000" />
+      <workItem from="1707236004949" duration="2079000" />
+      <workItem from="1707246550669" duration="495000" />
+      <workItem from="1707247094850" duration="1231000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -535,7 +543,15 @@
       <option name="project" value="LOCAL" />
       <updated>1707237079320</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="error correction">
+      <option name="closed" value="true" />
+      <created>1707237711835</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1707237711835</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -553,7 +569,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Order DOA" />
     <MESSAGE value="Cart and order DOA" />
     <MESSAGE value="Modules" />
     <MESSAGE value="DOA cart and order" />
@@ -578,7 +593,8 @@
     <MESSAGE value="user home page" />
     <MESSAGE value="user can add to cart" />
     <MESSAGE value="update product quantity for checkout" />
-    <option name="LAST_COMMIT_MESSAGE" value="update product quantity for checkout" />
+    <MESSAGE value="error correction" />
+    <option name="LAST_COMMIT_MESSAGE" value="error correction" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

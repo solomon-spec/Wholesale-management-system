@@ -9,6 +9,8 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -34,6 +36,8 @@ public class UserCartController extends SceneController implements Initializable
 
     @FXML
     private TableView<Product> table;
+    @FXML
+    private Label total;
 
     @Override
     public void initialize(java.net.URL arg0, java.util.ResourceBundle arg1) {
@@ -42,6 +46,15 @@ public class UserCartController extends SceneController implements Initializable
         Price.setCellValueFactory(new PropertyValueFactory<Product, Integer>("price"));
         QuantityInStock.setCellValueFactory(new PropertyValueFactory<Product, Integer>("quantity"));
         detail.setCellValueFactory(new PropertyValueFactory<Product, String>("description"));
+        ProductDAO productDAO = new ProductDAO();
+        float totalCost = 0;
+        try {
+            totalCost = new CartDAO().totalCost(Main.getUsername().getUserId());
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        total.setText("Total: " + totalCost);
+
 
     }
 
@@ -57,11 +70,66 @@ public class UserCartController extends SceneController implements Initializable
     public void checkout(ActionEvent e){
         CartDAO cartDAO = new CartDAO();
         try{
-            cartDAO.checkout(Main.getUsername().getUserId(), "adress 1");
+            // if cart is empty
+            if(table.getItems().isEmpty()){
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setTitle("Error");
+                alert.setHeaderText("Empty Cart");
+                alert.setContentText("Your cart is empty");
+                alert.showAndWait();
+                return;
+            }
+            cartDAO.checkout(Main.getUsername().getUserId(), "address 1");
+            ArrayList<Product> cart = cartDAO.getUserCart(Main.getUsername().getUserId());
+            setCart(cart);
+            // update the total cost
+            float totalCost = cartDAO.totalCost(Main.getUsername().getUserId());
+            // send success message
+            total.setText("Total: " + totalCost);
+            // alert success
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Success");
+            alert.setHeaderText("Checkout Successful");
+            alert.setContentText("Your order has been placed successfully");
+            alert.showAndWait();
+
         }
         catch(SQLException ex){
             ex.printStackTrace();
         }
 
     }
+    public void emptyCart(){
+        // if cart empty
+        if(table.getItems().isEmpty()){
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Error");
+            alert.setHeaderText("Empty Cart");
+            alert.setContentText("Your cart is empty");
+            alert.showAndWait();
+            return;
+        }
+        CartDAO cartDAO = new CartDAO();
+        try {
+            cartDAO.clearCart(Main.getUsername().getUserId());
+            ArrayList<Product> cart = cartDAO.getUserCart(Main.getUsername().getUserId());
+            setCart(cart);
+            // update the total cost
+            float totalCost = cartDAO.totalCost(Main.getUsername().getUserId());
+            // send success message
+            total.setText("Total: " + totalCost);
+            // alert success
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Success");
+            alert.setHeaderText("Cart Cleared");
+            alert.setContentText("Your cart has been cleared successfully");
+            alert.showAndWait();
+        }
+        catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+    }
+    // checkout function
+
 }

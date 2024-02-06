@@ -41,7 +41,7 @@ public class CartDAO {
     // total cost of user cart
     public float totalCost(int userId) throws SQLException{
         connection = DatabaseController.connect();
-        String query = "SELECT price FROM cart INNER JOIN product ON Cart.ProductID = product.ProductId WHERE User_ID = ?";
+        String query = "SELECT price FROM cart INNER JOIN product ON cart.ProductID = product.ProductId WHERE User_ID = ?";
         PreparedStatement statement = connection.prepareStatement(query);
         statement.setString(1, String.valueOf(userId));
         ArrayList<Product> products = new ArrayList<>();
@@ -130,7 +130,7 @@ public class CartDAO {
             System.out.println("Error in getting order id");
         }
         // add all product in orderItem table
-        query = "INSERT INTO orderItem (OrderID, ProductID, Quantity, Price) VALUES (?, ?, ?, ?)";
+        query = "INSERT INTO orderitem (OrderID, ProductID, Quantity, Price) VALUES (?, ?, ?, ?)";
         statement = connection.prepareStatement(query);
         statement.setString(1, String.valueOf(orderId));
         for (Product product: getUserCart(userId)) {

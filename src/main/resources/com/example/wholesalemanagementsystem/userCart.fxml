@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
@@ -8,19 +9,26 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.wholesalemanagementsystem.controllers.UserCartController">
     <children>
-        <TableView fx:id="table" layoutY="68.0" prefHeight="325.0" prefWidth="602.0">
+        <TableView fx:id="table" layoutY="68.0" prefHeight="224.0" prefWidth="602.0">
             <columns>
                 <TableColumn fx:id="productId" prefWidth="75.0" text="Product Id" />
                 <TableColumn fx:id="ProductName" prefWidth="115.3333740234375" text="Product Name" />
                 <TableColumn fx:id="Price" prefWidth="62.66668701171875" text="Price" />
                 <TableColumn fx:id="QuantityInStock" prefWidth="108.6666259765625" text="Quantity In Stock" />
-                <TableColumn fx:id="detail" prefWidth="65.3333740234375" text="Detail" />
+                <TableColumn fx:id="detail" prefWidth="238.0" text="Detail" />
             </columns>
         </TableView>
         <Label alignment="CENTER" layoutX="-1.0" layoutY="14.0" prefHeight="43.0" prefWidth="602.0" text="User Cart">
          <font>
             <Font name="System Bold" size="25.0" />
          </font></Label>
+      <Label fx:id="total" alignment="CENTER" layoutX="27.0" layoutY="310.0" prefHeight="55.0" prefWidth="147.0" text="Label">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Label>
+      <Button layoutX="376.0" layoutY="316.0" onAction="#checkout" mnemonicParsing="false" prefHeight="43.0" prefWidth="90.0" text="Checkout" />
+      <Button layoutX="477.0" layoutY="316.0" onAction="#emptyCart" mnemonicParsing="false" prefHeight="43.0" prefWidth="104.0" text="Remove All" />
     </children>
 
 </AnchorPane>
