@@ -24,7 +24,7 @@ public class CartDAO {
     // get user cart
     public ArrayList<Product> getUserCart(int userId) throws SQLException {
         connection = DatabaseController.connect();
-        String query = "SELECT ProductID FROM cart WHERE User_ID = ?";
+        String query = "SELECT ProductID, Quantity FROM cart WHERE User_ID = ?";
         PreparedStatement statement = connection.prepareStatement(query);
         statement.setString(1, String.valueOf(userId));
         ArrayList<Product> products = new ArrayList<>();
@@ -32,6 +32,8 @@ public class CartDAO {
         ProductDAO productDAO = new ProductDAO();
         while (resultSet.next()) {
             products.add(productDAO.getProductById(resultSet.getInt("ProductID")));
+            // set quantity
+            products.get(products.size() - 1).setQuantity(resultSet.getInt("Quantity"));
         }
 
         return products;
@@ -138,9 +140,9 @@ public class CartDAO {
             statement.setString(3, String.valueOf(product.getQuantity()));
             statement.setString(4, String.valueOf(product.getPrice()));
             statement.executeUpdate();
-            // update product quantity
-            ProductDAO productDAO = new ProductDAO();
-            productDAO.updateProductQuantity(product.getProductId(), product.getQuantity());
+            // update product quantity by subtracting from stock
+            int stock = new ProductDAO().getProductById(product.getProductId()).getQuantity();
+            new ProductDAO().updateProductQuantity(product.getProductId(), stock - product.getQuantity());
         }
         clearCart(userId);
         return rowsInserted > 0;
