@@ -138,6 +138,9 @@ public class CartDAO {
             statement.setString(3, String.valueOf(product.getQuantity()));
             statement.setString(4, String.valueOf(product.getPrice()));
             statement.executeUpdate();
+            // update product quantity
+            ProductDAO productDAO = new ProductDAO();
+            productDAO.updateProductQuantity(product.getProductId(), product.getQuantity());
         }
         clearCart(userId);
         return rowsInserted > 0;
