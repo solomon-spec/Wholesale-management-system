@@ -1,15 +1,16 @@
 package com.example.wholesalemanagementsystem.controllers;
 
+import com.example.wholesalemanagementsystem.Main;
 import com.example.wholesalemanagementsystem.dao.OrderDAO;
+import com.example.wholesalemanagementsystem.dao.UserDOA;
 import com.example.wholesalemanagementsystem.models.Order;
 import com.example.wholesalemanagementsystem.models.User;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 
 import java.net.URL;
@@ -25,10 +26,16 @@ public class UserDetailController extends SceneController implements Initializab
     private TextField password;
 
     @FXML
-    private TextField registrationDate;
+    private Button save;
+
+    @FXML
+    private Button makeAdmin;
 
     @FXML
     private TextField email;
+
+    @FXML
+    private TextField isAdmin;
 
     @FXML
     private TextField gender;
@@ -69,8 +76,22 @@ public class UserDetailController extends SceneController implements Initializab
         email.setText(user.getEmail());
         gender.setText(user.getGender());
         password.setText(user.getPassword());
+        if(!Main.getUsername().getIsAdmin() || user.getIsAdmin()){
+            makeAdmin.setVisible(false);
+
+        }
+        if(user.getIsAdmin()){
+            isAdmin.setText("Admin");
+
+        }
+        else{
+            isAdmin.setText("User");
+        }
+
+
         this.id = user.getUserId();
         fillOrderTable();
+        username.setEditable(false);
 
     }
     public void fillOrderTable(){
@@ -103,6 +124,45 @@ public class UserDetailController extends SceneController implements Initializab
         PaymentStatus.setCellValueFactory(new PropertyValueFactory<Order, String>("paymentStatus"));
         shippingAddress.setCellValueFactory(new PropertyValueFactory<Order, String>("shippingAddress"));
 
+
+    }
+
+    public void makeAdmin(ActionEvent e){
+        // prompt the user to enter password
+        // if password is correct then make user admin
+        // else show error message
+        TextInputDialog dialog = new TextInputDialog();
+        dialog.setTitle("Make Admin");
+        dialog.setHeaderText("Enter your password to make user admin");
+        dialog.setContentText("Password:");
+        String password = dialog.showAndWait().get();
+        if(Main.getUsername().getPassword().equals(password)){
+
+            try{
+                if( (new UserDOA()).makeAdmin(username.getText(), password)){
+                    Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                    alert.setTitle("Success");
+                    alert.setHeaderText("User is now admin");
+                    alert.showAndWait();
+                }
+                else{
+                    Alert alert = new Alert(Alert.AlertType.ERROR);
+                    alert.setTitle("Error");
+                    alert.setHeaderText("Something went wrong");
+                    alert.showAndWait();
+                }
+            }
+            catch (SQLException ex){
+                ex.printStackTrace();
+            }
+        }
+        else{
+            // show error message
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Error");
+            alert.setHeaderText("Incorrect password");
+            alert.showAndWait();
+        }
 
     }
 }

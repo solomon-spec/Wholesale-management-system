@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
@@ -18,50 +19,48 @@
       <VBox layoutX="23.0" layoutY="88.0" prefHeight="339.0" prefWidth="164.0">
          <Label alignment="TOP_LEFT" prefHeight="23.0" prefWidth="108.0" text="Name" textAlignment="CENTER">
             <font>
-               <Font name="Comic Sans MS" size="14.0"/>
+               <Font name="Comic Sans MS" size="14.0" />
             </font>
          </Label>
-         <TextField fx:id="name"/>
+         <TextField fx:id="name" />
          <Label alignment="TOP_LEFT" prefHeight="23.0" prefWidth="108.0" text="Last Name" textAlignment="CENTER">
             <font>
-               <Font name="Comic Sans MS" size="14.0"/>
+               <Font name="Comic Sans MS" size="14.0" />
             </font>
          </Label>
-         <TextField fx:id="lname"/>
+         <TextField fx:id="lname" />
          <Label alignment="TOP_LEFT" prefHeight="23.0" prefWidth="108.0" text="Email" textAlignment="CENTER">
             <font>
-               <Font name="Comic Sans MS" size="14.0"/>
+               <Font name="Comic Sans MS" size="14.0" />
             </font>
          </Label>
-         <TextField fx:id="email"/>
-         <Label alignment="TOP_LEFT" layoutX="10.0" layoutY="10.0" prefHeight="23.0" prefWidth="108.0" text="Username"
-                textAlignment="CENTER">
+         <TextField fx:id="email" />
+         <Label alignment="TOP_LEFT" layoutX="10.0" layoutY="10.0" prefHeight="23.0" prefWidth="108.0" text="Username" textAlignment="CENTER">
             <font>
-               <Font name="Comic Sans MS" size="14.0"/>
+               <Font name="Comic Sans MS" size="14.0" />
             </font>
          </Label>
-         <TextField fx:id="username"/>
+         <TextField fx:id="username" />
          <Label alignment="TOP_LEFT" prefHeight="23.0" prefWidth="108.0" text="Gender" textAlignment="CENTER">
             <font>
-               <Font name="Comic Sans MS" size="14.0"/>
+               <Font name="Comic Sans MS" size="14.0" />
             </font>
          </Label>
-         <TextField fx:id="gender" layoutX="10.0" layoutY="179.0"/>
-         <Label alignment="TOP_LEFT" prefHeight="23.0" prefWidth="168.0" text="RegistrationDate" textAlignment="CENTER">
+         <TextField fx:id="gender" layoutX="10.0" layoutY="179.0" />
+         <Label alignment="TOP_LEFT" prefHeight="23.0" prefWidth="168.0" text="Admin" textAlignment="CENTER">
             <font>
-               <Font name="Comic Sans MS" size="14.0"/>
+               <Font name="Comic Sans MS" size="14.0" />
             </font>
          </Label>
-         <TextField fx:id="registrationDate"/>
-         <Label alignment="TOP_LEFT" layoutX="10.0" layoutY="253.0" prefHeight="23.0" prefWidth="168.0" text="Password"
-                textAlignment="CENTER">
+         <TextField fx:id="isAdmin" />
+         <Label alignment="TOP_LEFT" layoutX="10.0" layoutY="253.0" prefHeight="23.0" prefWidth="168.0" text="Password" textAlignment="CENTER">
             <font>
-               <Font name="Comic Sans MS" size="14.0"/>
+               <Font name="Comic Sans MS" size="14.0" />
             </font>
          </Label>
-         <TextField fx:id="password" layoutX="10.0" layoutY="277.0"/>
+         <TextField fx:id="password" layoutX="10.0" layoutY="277.0" />
       </VBox>
-      <TableView fx:id="orderTable" layoutX="226.0" layoutY="74.0" prefHeight="420.0" prefWidth="543.0">
+      <TableView fx:id="orderTable" layoutX="226.0" layoutY="74.0" prefHeight="294.0" prefWidth="543.0">
         <columns>
           <TableColumn fx:id="orderId" prefWidth="75.0" text="Order ID" />
           <TableColumn fx:id="userId" prefWidth="75.0" text="User ID" />
@@ -71,5 +70,7 @@
             <TableColumn fx:id="shippingAddress" prefWidth="104.00003051757812" text="Shipping Address" />
         </columns>
       </TableView>
+      <Button fx:id="makeAdmin" onAction="#makeAdmin" layoutX="477.0" layoutY="427.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="134.0" text="make user Admin" />
+      <Button fx:id="save" layoutX="661.0" layoutY="427.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="134.0" text="Save changes" />
    </children>
 </AnchorPane>

@@ -32,7 +32,12 @@ public class LoginController extends SceneController {
                 User user = userDOA.getUserByUsername(username);
                 Main.setUsername(user);
                 System.out.println(user.getUserName());
-                userHome(e);
+                if(Main.getUsername().getIsAdmin()){
+                    adminScene(e);
+                }
+                else{
+                    userHome(e);
+                }
             }
             catch (SQLException ex){
                 ex.printStackTrace();

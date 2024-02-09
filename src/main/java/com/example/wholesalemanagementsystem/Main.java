@@ -42,3 +42,28 @@ public class Main extends Application {
          launch();
     }
 }
+
+//-------------------functionality that are already built---------------------
+/*
+ okay the user can log in, or register
+ when user is registered it is redirected to log in page
+ when a user log they are redirected to the home page
+ the home page have three parts.
+ the cart
+    user can see the products in the cart
+    they can remove all product
+    they can check out the cart
+products page
+    the user can view and add a product to the page
+
+ */
+//-----------------------------------to be added -------------------------------
+/*
+cart page
+    user should change the quantity or remove a product
+order history page
+    full order history page
+user product catalog page
+    user should not be allowed to add a product with a quantity that is greater than the quantity in stock
+
+*/

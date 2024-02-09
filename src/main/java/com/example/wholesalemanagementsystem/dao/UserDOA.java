@@ -1,5 +1,6 @@
 package com.example.wholesalemanagementsystem.dao;
 
+import com.example.wholesalemanagementsystem.Main;
 import com.example.wholesalemanagementsystem.models.User;
 
 import java.sql.Connection;
@@ -113,6 +114,22 @@ public class UserDOA {
         statement.setString(1, String.valueOf(id));
         int rowsDeleted = statement.executeUpdate();
         return rowsDeleted > 0;
+    }
+
+    public boolean makeAdmin(String username, String password) throws SQLException {
+        connection = DatabaseController.connect();
+        // if current user is admin and have correct password then make user admin
+
+        if(Main.getUsername().getIsAdmin() && Main.getUsername().getPassword().equals(password)){
+            String query = "UPDATE user SET is_admin = 1 WHERE username = ?";
+            PreparedStatement statement = connection.prepareStatement(query);
+            statement.setString(1, String.valueOf(username));
+            int rowsUpdated = statement.executeUpdate();
+            return rowsUpdated > 0;
+        }
+        else{
+            return false;
+        }
     }
 
 }

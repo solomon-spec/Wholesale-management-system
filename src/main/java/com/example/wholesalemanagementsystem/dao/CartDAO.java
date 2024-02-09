@@ -43,14 +43,14 @@ public class CartDAO {
     // total cost of user cart
     public float totalCost(int userId) throws SQLException{
         connection = DatabaseController.connect();
-        String query = "SELECT price FROM cart INNER JOIN product ON cart.ProductID = product.ProductId WHERE User_ID = ?";
+        String query = "SELECT price,Quantity FROM cart INNER JOIN product ON cart.ProductID = product.ProductId WHERE User_ID = ?";
         PreparedStatement statement = connection.prepareStatement(query);
         statement.setString(1, String.valueOf(userId));
         ArrayList<Product> products = new ArrayList<>();
         var resultSet = statement.executeQuery();
         float total = 0;
         while (resultSet.next()) {
-            total += resultSet.getFloat("price");
+            total += resultSet.getFloat("price") * resultSet.getInt("Quantity");
 
         }
         return total;
