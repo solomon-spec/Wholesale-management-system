@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
@@ -76,6 +77,7 @@
             </Label>
          </children>
       </VBox>
+      <Button fx:id="changeToPaid" onAction="#changePaymentStatus" layoutX="512.0" layoutY="337.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="82.0" text="Paid" />
     </children>
 
 </AnchorPane>

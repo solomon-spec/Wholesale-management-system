@@ -2,6 +2,7 @@ package com.example.wholesalemanagementsystem.dao;
 
 import com.example.wholesalemanagementsystem.Main;
 import com.example.wholesalemanagementsystem.models.User;
+import javafx.event.ActionEvent;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -92,7 +93,7 @@ public class UserDOA {
 
     public boolean updateUser(User user) throws SQLException {
         connection = DatabaseController.connect();
-        String query = "UPDATE User SET username = ?, password = ?, email = ?, first_name = ?, last_name = ?, gender = ?, is_admin = ? WHERE user_id = ?";
+        String query = "UPDATE user SET username = ?, password = ?, email = ?, first_name = ?, last_name = ?, gender = ?, is_admin = ? WHERE user_id = ?";
         PreparedStatement statement = connection.prepareStatement(query);
         statement.setString(1, user.getUserName());
         statement.setString(2, user.getPassword());
@@ -105,6 +106,21 @@ public class UserDOA {
         int rowsUpdated = statement.executeUpdate();
         return rowsUpdated > 0;
     }
+    public boolean updateUserDetails( String username, String password, String email, String firstname, String lmane, String gender) throws SQLException {
+        connection = DatabaseController.connect();
+        String query = "UPDATE user SET password = ?, email = ?, first_name = ?, last_name = ?, gender = ? WHERE username = ?";
+        PreparedStatement statement = connection.prepareStatement(query);
+        statement.setString(1, password);
+        statement.setString(2, email);
+        statement.setString(3, firstname);
+        statement.setString(4, lmane);
+        statement.setString(5, gender);
+        statement.setString(6, username);
+
+        int rowsUpdated = statement.executeUpdate();
+        return rowsUpdated > 0;
+    }
+
 
     // delete user by id
     public boolean deleteUser(int id) throws SQLException {
@@ -131,5 +147,6 @@ public class UserDOA {
             return false;
         }
     }
+
 
 }

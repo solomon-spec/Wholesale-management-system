@@ -15,6 +15,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 
 import java.net.URL;
 import java.sql.SQLException;
+import java.util.NoSuchElementException;
 import java.util.ResourceBundle;
 
 public class UserDetailController extends SceneController implements Initializable {
@@ -128,9 +129,6 @@ public class UserDetailController extends SceneController implements Initializab
     }
 
     public void makeAdmin(ActionEvent e){
-        // prompt the user to enter password
-        // if password is correct then make user admin
-        // else show error message
         TextInputDialog dialog = new TextInputDialog();
         dialog.setTitle("Make Admin");
         dialog.setHeaderText("Enter your password to make user admin");
@@ -164,5 +162,48 @@ public class UserDetailController extends SceneController implements Initializab
             alert.showAndWait();
         }
 
+    }
+    public void saveChanges(ActionEvent e){
+        TextInputDialog dialog = new TextInputDialog();
+        dialog.setTitle("Save changes");
+        dialog.setHeaderText("Enter your password to save changes");
+        dialog.setContentText("Password:");
+        String password;
+        try{
+            password = dialog.showAndWait().get();
+        }
+        catch (NoSuchElementException ex){
+            password = "";
+        }
+
+
+
+        if(Main.getUsername().getPassword().equals(password)){
+
+            try{
+                if( (new UserDOA()).updateUserDetails(username.getText(),password,email.getText(),name.getText(),lname.getText(),gender.getText())){
+                    Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                    alert.setTitle("Success");
+                    alert.setHeaderText("Changes Saved ");
+                    alert.showAndWait();
+                }
+                else{
+                    Alert alert = new Alert(Alert.AlertType.ERROR);
+                    alert.setTitle("Error");
+                    alert.setHeaderText("Something went wrong");
+                    alert.showAndWait();
+                }
+            }
+            catch (SQLException ex){
+                ex.printStackTrace();
+            }
+        }
+        else{
+            // show error message
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Error");
+            alert.setHeaderText("Incorrect password");
+            alert.showAndWait();
+        }
     }
 }

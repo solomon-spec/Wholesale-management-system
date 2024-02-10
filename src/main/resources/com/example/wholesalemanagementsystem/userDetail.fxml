@@ -71,6 +71,6 @@
         </columns>
       </TableView>
       <Button fx:id="makeAdmin" onAction="#makeAdmin" layoutX="477.0" layoutY="427.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="134.0" text="make user Admin" />
-      <Button fx:id="save" layoutX="661.0" layoutY="427.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="134.0" text="Save changes" />
+      <Button fx:id="save" onAction="#saveChanges" layoutX="661.0" layoutY="427.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="134.0" text="Save changes" />
    </children>
 </AnchorPane>

@@ -1,15 +1,15 @@
 package com.example.wholesalemanagementsystem.controllers;
 
+import com.example.wholesalemanagementsystem.dao.OrderDAO;
 import com.example.wholesalemanagementsystem.dao.OrderItemDOA;
 import com.example.wholesalemanagementsystem.models.Order;
 import com.example.wholesalemanagementsystem.models.OrderItem;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Label;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 
 import java.net.URL;
@@ -44,11 +44,14 @@ public class OrderDetailController  extends SceneController implements Initializ
     private TableColumn<OrderItem, Float> Price;
     @FXML
     private TableView<OrderItem> table;
+    @FXML
+    private Button changeToPaid;
     public void initialize(URL url, ResourceBundle resourceBundle) {
         productId.setCellValueFactory(new PropertyValueFactory<OrderItem,Integer>("productId"));
         quantity.setCellValueFactory(new PropertyValueFactory<OrderItem,Integer>("quantity"));
         Price.setCellValueFactory(new PropertyValueFactory<OrderItem,Float>("price"));
         orderItemId.setCellValueFactory(new PropertyValueFactory<OrderItem,Integer>("id"));
+
 
 
     }
@@ -69,9 +72,32 @@ public class OrderDetailController  extends SceneController implements Initializ
         catch(SQLException e){
             System.out.println(e.getMessage());
         }
+        if(order.getPaymentStatus().equals("Completed")){
+            changeToPaid.setVisible(false);
+
+        }
 
 
 
+    }
+
+
+    public void changePaymentStatus(ActionEvent e){
+        OrderDAO orderDAO = new OrderDAO();
+        int id = Integer.parseInt(orderId.getText());
+        try{
+            orderDAO.updateOrderPaymentStatus(id,"Completed");
+            paymentStatus.setText("Completed");
+            //show success message
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Success");
+            alert.setHeaderText("Payment status updated");
+            alert.showAndWait();
+
+        }
+        catch(SQLException ex){
+            System.out.println(ex.getMessage());
+        }
     }
 
 }
